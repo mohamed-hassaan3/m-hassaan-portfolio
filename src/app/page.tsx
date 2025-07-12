@@ -1,7 +1,10 @@
+import { Hero } from "@/modules/Hero";
+import Layout from "@/modules/Layout";
+
 export default function Home() {
   return (
-    <div>
-      <h1>Portfolio</h1>
-    </div>
+    <Layout>
+      <Hero />
+    </Layout>
   );
 }
