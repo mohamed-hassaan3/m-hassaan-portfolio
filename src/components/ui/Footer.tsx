@@ -1,11 +1,17 @@
-import React from 'react'
+import React from "react";
+import SocialIcons from "./SocialIcons";
 
 const Footer = () => {
   return (
-    <div className='text-center dark:text-neutral-400'>
-      <p>&copy; 2025 My App. All rights reserved.</p>
+    <div className="dark:text-neutral-400 flex items-center justify-between">
+      <aside>
+        <p>&copy; 2025 My App. All rights reserved.</p>
+      </aside>
+      <aside>
+        <SocialIcons />
+      </aside>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

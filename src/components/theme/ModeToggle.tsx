@@ -13,7 +13,7 @@ export function ModeToggle() {
   };
 
   return (
-    <div className="">
+    <div>
       <Button onClick={toggleTheme} variant="outline" size="icon" className=" rounded-full dark:hover:bg-neutral-400 border-0 dark:bg-transparent cursor-pointer">
         <Sun
           onClick={() => setTheme("light")}

@@ -8,7 +8,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <div className="sm:w-[80%] w-full m-auto">
         <Header />
       </div>
-      {children}
+      <main className="pb-12">{children}</main>
       <div className="sm:w-[80%] w-full m-auto">
         <Footer />
       </div>
