@@ -19,7 +19,7 @@ export function Hero() {
         />
 
         <BlurText
-          text="I work with brands globally to build pixel-perfect, engaging, and accessible digital experiences that drive results and achieve business goals."
+          text={`I'm  Mohamed works with brands globally to build pixel-perfect, engaging, and accessible digital experiences that drive results and achieve business goals.`}
           delay={150}
           animateBy="words"
           direction="top"
