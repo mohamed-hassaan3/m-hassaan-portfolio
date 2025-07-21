@@ -1,10 +1,11 @@
-import { Hero } from "@/modules/Hero";
-import Layout from "@/modules/Layout";
+import { SubProjects, Hero, Layout, SubAbout } from "@/modules";
 
 export default function Home() {
   return (
     <Layout>
       <Hero />
+      <SubAbout />
+      <SubProjects />
     </Layout>
   );
 }

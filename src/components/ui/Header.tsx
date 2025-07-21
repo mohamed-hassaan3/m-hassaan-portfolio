@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/../public/assets/logo.webp";
+import logo from "@/../public/assets/avatar.svg";
 import { ModeToggle } from "../theme/ModeToggle";
 
 const Header = () => {
@@ -9,10 +9,10 @@ const Header = () => {
     <header className="flex items-center justify-between dark:text-neutral-400">
       <aside>
         <Link href={"/"}>
-          <Image src={logo} width={45} height={25} alt="logo" />
+          <Image src={logo} width={30} height={30} alt="logo" />
         </Link>
       </aside>
-      <nav className="flex items-center sm:gap-6 gap-4 *:hover:dark:text-neutral-200 sm:*:px-3 *:px-1">
+      <nav className="flex items-center sm:gap-6 gap-1 *:hover:dark:text-neutral-200 sm:*:px-3 *:px-1 text-xs sm:text-lg">
         <Link href={"/"}>Home</Link>
         <Link href={"/projects"}>Projects</Link>
         <Link href={"/about"}>About</Link>

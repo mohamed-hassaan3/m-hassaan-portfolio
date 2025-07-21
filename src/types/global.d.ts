@@ -1,5 +1,12 @@
+export {};
 
-type ResponsiveProps = {
-    children: React.ReactNode
-    reset: string
+declare global {
+  type ResponsiveProps = {
+    children: React.ReactNode;
+    reset: string;
+  };
+  type TitleProps = {
+    text: string
+    icon: React.ReactNode
+  }
 }

@@ -5,9 +5,9 @@ import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Analytics } from "@vercel/analytics/next";
 
 const michome = Michroma({
-         weight: '400',
-         subsets: ['latin'],
-       });
+  weight: "400",
+  subsets: ["latin"],
+});
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",

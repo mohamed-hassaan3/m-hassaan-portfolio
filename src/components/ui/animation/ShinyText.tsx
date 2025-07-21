@@ -3,6 +3,7 @@ import React from "react";
 
 
 const ShinyText: React.FC<ShinyTextProps> = ({
+  icon,
   text,
   disabled = false,
   speed = 5,
@@ -22,7 +23,7 @@ const ShinyText: React.FC<ShinyTextProps> = ({
         animationDuration: animationDuration,
       }}
     >
-      {text}
+      {text}{icon}
     </div>
   );
 };

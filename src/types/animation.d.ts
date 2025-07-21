@@ -1,6 +1,7 @@
 import React, { ReactNode, HTMLAttributes } from "react";
 
 export interface ShinyTextProps {
+  icon?: React.ReactNode
   text: string;
   disabled?: boolean;
   speed?: number;
@@ -54,7 +55,20 @@ export interface MagnetProps extends HTMLAttributes<HTMLDivElement> {
 
 export type AnimationButtonProps ={
   children: React.ReactNode
-  className: string
+  className?: string
   onClick?: ()=>void
   href: string
+}
+
+export interface ScrollRevealProps {
+  children: ReactNode;
+  scrollContainerRef?: RefObject<HTMLElement>;
+  enableBlur?: boolean;
+  baseOpacity?: number;
+  baseRotation?: number;
+  blurStrength?: number;
+  containerClassName?: string;
+  textClassName?: string;
+  rotationEnd?: string;
+  wordAnimationEnd?: string;
 }
