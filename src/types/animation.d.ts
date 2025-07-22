@@ -72,3 +72,18 @@ export interface ScrollRevealProps {
   rotationEnd?: string;
   wordAnimationEnd?: string;
 }
+
+export interface AnimatedContentProps {
+  children: ReactNode;
+  distance?: number;
+  direction?: "vertical" | "horizontal";
+  reverse?: boolean;
+  duration?: number;
+  ease?: string | ((progress: number) => number);
+  initialOpacity?: number;
+  animateOpacity?: boolean;
+  scale?: number;
+  threshold?: number;
+  delay?: number;
+  onComplete?: () => void;
+}

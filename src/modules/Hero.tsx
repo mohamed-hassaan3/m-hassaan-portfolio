@@ -17,15 +17,15 @@ import LOGO from "../../public/assets/avatar.svg";
           text="Frontend Engineer"
           disabled={false}
           speed={3}
-          className="custom-class sm:text-6xl text-3xl text-center font-semibold whitespace-nowrap py-1"
+          className="custom-class sm:text-6xl text-3xl text-center font-semibold whitespace-nowrap py-2"
         />
 
         <BlurText
-          text={`I'm  Mohamed, and I work with brands globally to build pixel-perfect, engaging, and accessible digital experiences that drive results and achieve business goals.`}
+          text={`I'm  Mohamed, and I work with brands  globally to build pixel-perfect, engaging, and accessible digital experiences that drive results and achieve business goals.`}
           delay={150}
           animateBy="words"
           direction="top"
-          className="dark:text-neutral-200 max-w-lg mx-auto my-2 text-sm text-center relative z-10"
+          className="dark:text-neutral-200 max-w-lg mx-auto my-2 text-sm text-center relative z-10 sm:leading-6 tracking-wider font-extralight"
         />
       </div>
       {/* LOOP */}

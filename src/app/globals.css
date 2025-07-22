@@ -47,7 +47,8 @@
   --sidebar-ring: oklch(0.705 0.015 286.067);
 } 
   */
-@theme inline {
+
+  @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -86,6 +87,7 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 }
+
 /* ANIMATION */
 @theme {
   --animate-shine: shine 5s linear infinite;
