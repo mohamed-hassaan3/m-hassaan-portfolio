@@ -8,7 +8,7 @@ const Error = () => {
       <div className="tv-container">
         <div className="tv-screen">
           <div className="static" />
-          <div className="error-text">ERROR: 500</div>
+          <div className="error-text text-nowrap">ERROR: 500</div>
         </div>
         <div className="tv-stand" />
       </div>

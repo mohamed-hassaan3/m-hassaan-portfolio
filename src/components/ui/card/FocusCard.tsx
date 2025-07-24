@@ -3,6 +3,8 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { Project } from "@/types/data";
+import StarBorder from "../animation/StrarBorder";
+import { DynamicIcon } from "lucide-react/dynamic";
 
 export const Card = React.memo(
   ({
@@ -20,7 +22,7 @@ export const Card = React.memo(
       onMouseEnter={() => setHovered(index)}
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "rounded-2xl relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-full  transition-all duration-300 ease-out border border-white",
+        "rounded-2xl relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-full  transition-all duration-300 ease-out",
         hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
       )}
     >
@@ -29,17 +31,43 @@ export const Card = React.memo(
         alt={card.name}
         width={0}
         height={0}
-        className="object-cover absolute inset-0 w-[80%] h-[80%] md:aspect-video -translate-x-1/2 left-[50%] -translate-y-1/2 top-[50%] rounded-2xl"
+        className="object-cover absolute inset-0 h-[80%] w-[80%] md:aspect-video -translate-x-1/2 left-[50%] -translate-y-1/2 top-[50%] rounded-2xl"
       />
       <div
         className={cn(
-          "absolute inset-0 bg-black/50 flex items-end py-8 px-4 transition-opacity duration-300",
+          "absolute inset-0 bg-black/50 justify-end flex flex-col py-8 px-4 transition-opacity duration-300",
           hovered === index ? "opacity-100" : "opacity-0"
         )}
       >
-        <div className="text-xl md:text-2xl font-medium bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200">
+        <div className="text-md md:text-xl font-medium bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200 mb-2">
           {card.name}
         </div>
+        <ul className="flex items-center gap-2 ">
+          <li>
+            <StarBorder
+              as="button"
+              className="custom-class "
+              color="cyan"
+              speed="5s"
+            >
+              <a target="_blank" href={card.links.demo}>
+                <DynamicIcon name="link" color="gray" size={24} />
+              </a>
+            </StarBorder>
+          </li>
+          <li>
+            <StarBorder
+              as="button"
+              className="custom-class "
+              color="cyan"
+              speed="5s"
+            >
+              <a target="_blank" href={card.links.github}>
+                <DynamicIcon name="github" color="gray" size={24} />
+              </a>
+            </StarBorder>
+          </li>
+        </ul>
       </div>
     </div>
   )

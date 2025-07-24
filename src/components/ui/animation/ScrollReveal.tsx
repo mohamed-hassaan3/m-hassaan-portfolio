@@ -1,5 +1,5 @@
-"use client"
-import React, { useEffect, useRef, useMemo} from "react";
+"use client";
+import React, { useEffect, useRef, useMemo } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollRevealProps } from "@/types/animation";
@@ -111,7 +111,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
   return (
     <h2 ref={containerRef} className={`my-5 ${containerClassName}`}>
       <p
-        className={`text-[clamp(1.6rem,4vw,1.5rem)] leading-[2] font-semibold ${textClassName}`}
+        className={`text-[clamp(1.6rem,4vw,1.5rem)] leading-[2] font-semibold !text-xs sm:!text-[26px]  ${textClassName}`}
       >
         {splitText}
       </p>

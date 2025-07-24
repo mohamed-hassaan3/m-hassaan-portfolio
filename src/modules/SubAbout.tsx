@@ -18,7 +18,7 @@ const SubAbout = () => {
           enableBlur={true}
           baseRotation={0}
           blurStrength={10}
-          textClassName="font-thin "
+          textClassName="font-thin"
           wordAnimationEnd="sm:top center "
         >
           I’m a Frontend Engineer with over 3 years of experience in React,

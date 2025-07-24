@@ -8,8 +8,8 @@ export interface Skill {
 }
 
 export interface ProjectLink {
-  demo?: string;
-  github: string;
+  demo?: string | url;
+  github: string | url;
 }
 
 export interface Project {
