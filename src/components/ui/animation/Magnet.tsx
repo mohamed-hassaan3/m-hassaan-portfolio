@@ -1,3 +1,4 @@
+"use client"
 import { MagnetProps } from "@/types/animation";
 import React, { useState, useEffect, useRef } from "react";
 

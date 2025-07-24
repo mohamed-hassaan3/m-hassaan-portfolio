@@ -31,7 +31,7 @@ export const Card = React.memo(
         alt={card.name}
         width={0}
         height={0}
-        className="object-cover absolute inset-0 h-[80%] w-[80%] md:aspect-video -translate-x-1/2 left-[50%] -translate-y-1/2 top-[50%] rounded-2xl"
+        className="object-cover absolute inset-0 md:aspect-video -translate-x-1/2 left-[50%] -translate-y-1/2 top-[50%] rounded-2xl"
       />
       <div
         className={cn(
@@ -42,11 +42,11 @@ export const Card = React.memo(
         <div className="text-md md:text-xl font-medium bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200 mb-2">
           {card.name}
         </div>
-        <ul className="flex items-center gap-2 ">
+        <ul className="flex items-center gap-2 sm:gap-4 ">
           <li>
             <StarBorder
               as="button"
-              className="custom-class "
+              className="custom-class bg-neutral-900"
               color="cyan"
               speed="5s"
             >
@@ -58,7 +58,7 @@ export const Card = React.memo(
           <li>
             <StarBorder
               as="button"
-              className="custom-class "
+              className="custom-class bg-neutral-900"
               color="cyan"
               speed="5s"
             >

@@ -8,7 +8,7 @@ import Image from "next/image";
 import React from "react";
 import LOGO from "../../public/assets/avatar.svg";
 
- function Hero() {
+function Hero() {
   return (
     <div className="min-h-dvh flex flex-col justify-center w-full rounded-md dark:bg-neutral-950 relative items-center antialiased">
       {/* INTERDOUCTION CONTENT */}
@@ -42,21 +42,20 @@ import LOGO from "../../public/assets/avatar.svg";
       {/* BACKGROUND */}
       <BackgroundBeams />
       {/* BUTTON */}
-      <div className=" absolute top-[40%]">
-
-      <AnimationButton href="/about">
-        <Image
-          src={LOGO}
-          alt="logo"
-          width={24}
-          height={24}
-          className="hidden sm:inline"
+      <div className=" absolute bottom-[25%]">
+        <AnimationButton href="/about">
+          <Image
+            src={LOGO}
+            alt="logo"
+            width={24}
+            height={24}
+            className="hidden sm:inline"
           />
-        <span>Know me better</span>
-      </AnimationButton>
-          </div>
+          <span>Know me better</span>
+        </AnimationButton>
+      </div>
     </div>
   );
 }
 
-export default Hero
+export default Hero;

@@ -15,10 +15,10 @@ const StarBorder = <T extends React.ElementType = "button">({
   return (
     <Component
       className={`relative inline-block overflow-hidden rounded-[20px] ${className}`}
-      {...(rest)}
+      {...rest}
       style={{
         padding: `${thickness}px 0`,
-        ...(rest).style,
+        ...rest.style,
       }}
     >
       <div
