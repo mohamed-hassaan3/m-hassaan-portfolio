@@ -4,7 +4,7 @@ import Footer from "../components/ui/Footer";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="m-auto overflow-x-hidden sm:px-4 px-2 py-2">
+    <div className="m-auto overflow-x-hidden px-4 py-2">
       <div className="sm:w-[80%] w-full m-auto">
         <Header />
       </div>

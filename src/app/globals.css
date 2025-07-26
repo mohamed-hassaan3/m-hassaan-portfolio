@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
 @custom-variant dark (&:is(.dark *));
 /*  :root {
   --text-primary: #0a0a0a;
@@ -202,4 +203,8 @@
 ::selection {
   background-color: #fffc;
   color: #000;
+}
+
+body {
+  scroll-behavior: smooth !important;
 }

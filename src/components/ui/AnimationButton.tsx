@@ -19,7 +19,7 @@ const AnimationButton = ({
         >
           <Link
             href={href}
-            className={`${className} space-x-2 text-xs sm:text-md whitespace-nowrap`}
+            className={`${className} space-x-2 text-xs sm:text-md whitespace-nowrap `}
           >
             {children}
           </Link>

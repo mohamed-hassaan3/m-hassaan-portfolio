@@ -5,10 +5,12 @@ import devPlatform from "./dev-platform.webp";
 import email from "./Email-iMac.webp";
 import future from "./future-vehicles.webp";
 import jacky from "./jacky-commerce-app.webp";
-import kibillis from "./kibllis-real-estate.webp";
 import movieNight from "./movie-night.webp";
 import nyTimes from "./ny-times-app.webp";
 import oia from "./oia-properties.webp";
+import taskApp from "./task-app.webp"
+import map from "./map.webp"
+import todoList from "./todo-list.webp"
 
 export {
   vision,
@@ -18,8 +20,10 @@ export {
   email,
   future,
   jacky,
-  kibillis,
   movieNight,
   nyTimes,
   oia,
+  taskApp,
+  map,
+  todoList
 };

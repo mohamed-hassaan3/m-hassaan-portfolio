@@ -12,7 +12,7 @@ const SubAbout = () => {
           icon={<Sparkle color={"var(--highlight)"} size={30} />}
         />
       </section>
-      <section className="">
+      <section>
         <ScrollReveal
           baseOpacity={0}
           enableBlur={true}

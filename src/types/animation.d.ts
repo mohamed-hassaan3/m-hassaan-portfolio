@@ -87,3 +87,18 @@ export interface AnimatedContentProps {
   delay?: number;
   onComplete?: () => void;
 }
+
+export interface ScrollStackProps {
+  className?: string;
+  children: ReactNode;
+  itemDistance?: number;
+  itemScale?: number;
+  itemStackDistance?: number;
+  stackPosition?: string;
+  scaleEndPosition?: string;
+  baseScale?: number;
+  scaleDuration?: number;
+  rotationAmount?: number;
+  blurAmount?: number;
+  onStackComplete?: () => void;
+}

@@ -13,10 +13,11 @@ export interface ProjectLink {
 }
 
 export interface Project {
-  id: string;
+  slug: string;
   name: string;
   description: string;
   src: StaticImageData;
   links: ProjectLink;
   tech: string[]; 
+  category: string
 }

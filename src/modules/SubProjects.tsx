@@ -17,7 +17,7 @@ const SubProjects = () => {
         />
       </section>
       <section className="my-2 ">
-        <h2 className="sm:text-xl sm:mb-2 mb-1 text-sm font-semibold">
+        <h2 className="sm:text-3xl sm:py-2 sm:mb-2 mb-1 text-sm font-semibold tracking-wider">
           Selected Projects
         </h2>
         <p className="sm:text-md text-md font-semibold text-neutral-400 font-mono">
@@ -30,7 +30,7 @@ const SubProjects = () => {
       </section>
       <aside>
         <AnimationButton href="/projects">
-          More Projects
+          View All Projects
         </AnimationButton>
       </aside>
     </article>

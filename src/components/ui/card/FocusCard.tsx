@@ -5,8 +5,9 @@ import Image from "next/image";
 import { Project } from "@/types/data";
 import StarBorder from "../animation/StrarBorder";
 import { DynamicIcon } from "lucide-react/dynamic";
+import Link from "next/link";
 
-export const Card = React.memo(
+export const FocusCard = React.memo(
   ({
     card,
     index,
@@ -22,7 +23,7 @@ export const Card = React.memo(
       onMouseEnter={() => setHovered(index)}
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "rounded-2xl relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-full  transition-all duration-300 ease-out",
+        "rounded-4xl shadow-amber-500 shadow-sm relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-full  transition-all duration-300 ease-out",
         hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
       )}
     >
@@ -31,7 +32,7 @@ export const Card = React.memo(
         alt={card.name}
         width={0}
         height={0}
-        className="object-cover absolute inset-0 md:aspect-video -translate-x-1/2 left-[50%] -translate-y-1/2 top-[50%] rounded-2xl"
+        className="object-cover absolute inset-0 md:aspect-video -translate-x-1/2 left-[50%] -translate-y-1/2 top-[50%] w-[75%] h-[75%] border-6 border-white rounded-4xl"
       />
       <div
         className={cn(
@@ -39,9 +40,12 @@ export const Card = React.memo(
           hovered === index ? "opacity-100" : "opacity-0"
         )}
       >
-        <div className="text-md md:text-xl font-medium bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200 mb-2">
+        <Link
+          href={`/project/${card.slug}`}
+          className="text-md md:text-xl font-medium bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200 mb-2 hover:text-[var(--highlight)]"
+        >
           {card.name}
-        </div>
+        </Link>
         <ul className="flex items-center gap-2 sm:gap-4 ">
           <li>
             <StarBorder
@@ -73,4 +77,4 @@ export const Card = React.memo(
   )
 );
 
-Card.displayName = "Card";
+FocusCard.displayName = "Card";
