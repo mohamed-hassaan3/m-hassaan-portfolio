@@ -1,4 +1,4 @@
-import { Project, Skill } from "@/types/data";
+import { Project, Skill, SpecialityProps } from "@/types/data";
 import {
   //   Database,
   //   Container,
@@ -7,6 +7,9 @@ import {
   //   GitCommit,
   Github,
   Rocket,
+  CodeXml,
+  PenTool,
+  Container,
   //   LucideIcon
 } from "lucide-react";
 
@@ -22,33 +25,34 @@ import {
   oia,
   taskApp,
   map,
-  todoList
-} from "../../public/images";
+  todoList,
+} from "../../public/images/projects";
+import { development, deployment, design } from "../../public/images/accordion";
 
 export const skills: Skill[] = [
   {
     id: "javascript",
     name: "JavaScript",
-    icon: "SiJavascript", 
-    color: "#F7DF1E", 
+    icon: "SiJavascript",
+    color: "#F7DF1E",
   },
   {
     id: "typescript",
     name: "TypeScript",
-    icon: "SiTypescript", 
-    color: "#3178C6", 
+    icon: "SiTypescript",
+    color: "#3178C6",
   },
   {
     id: "react",
     name: "React",
-    icon: "SiReact", 
-    color: "#61DAFB", 
+    icon: "SiReact",
+    color: "#61DAFB",
   },
   {
     id: "nextjs",
     name: "Next.js",
-    icon: "SiNextdotjs", 
-    color: "#000000", 
+    icon: "SiNextdotjs",
+    color: "#000000",
   },
   {
     id: "prisma",
@@ -114,7 +118,7 @@ export const skills: Skill[] = [
     id: "docker",
     name: "Docker",
     icon: "SiDocker",
-    color: "#2496ED", 
+    color: "#2496ED",
   },
   {
     id: "kubernetes",
@@ -553,13 +557,7 @@ export const projects: Project[] = [
       demo: "https://map-box-by-mhassaan.netlify.app/",
       github: "https://github.com/mohamed-hassaan3/map-box",
     },
-    tech: [
-      "HTML",
-      "CSS",
-      "typescript",
-      "API",
-      "Map Box API",
-    ],
+    tech: ["HTML", "CSS", "typescript", "API", "Map Box API"],
     category: "JavaScript",
   },
   {
@@ -601,7 +599,7 @@ export const projects: Project[] = [
     tech: ["HTML", "CSS", "SASS", "UI UX"],
     category: "UI UX",
   },
-   {
+  {
     slug: "future-vehicles",
     name: "Future Vehicles",
     description:
@@ -613,5 +611,32 @@ export const projects: Project[] = [
     },
     tech: ["HTML5", "CSS3", "Bootstrap", "JavaScript", "NPM"],
     category: "UI UX",
+  },
+];
+
+export const speciality: SpecialityProps[] = [
+  {
+    slug: "development",
+    title: "Development",
+    icon: CodeXml,
+    desc: "Building responsive websites. Providing the users an enriching experience that responds to any device and screen size.",
+    img: development,
+    item: 1
+  },
+  {
+    slug: "ui-ux-design",
+    title: "UI/UX Design",
+    icon: PenTool,
+    desc: "Designing user-centric, modern interfaces that shapes how the audience interacts with the product.",
+    img: design,
+    item: 2
+  },
+  {
+    slug: "deployment",
+    title: "Deployment",
+    icon: Container,
+    desc: "The software development lifecycle that bridges development and user accessibility, ensuring the successful delivery of new software versions or updates.",
+    img: deployment,
+    item: 3
   },
 ];

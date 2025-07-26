@@ -21,3 +21,12 @@ export interface Project {
   tech: string[]; 
   category: string
 }
+
+export interface SpecialityProps {
+  slug: string
+  title: string
+  icon: LucideIcon
+  desc: string
+  img: StaticImageData
+  item: number
+}
