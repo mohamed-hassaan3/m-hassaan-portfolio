@@ -29,404 +29,432 @@ import {
 } from "../../public/images/projects";
 import { development, deployment, design } from "../../public/images/accordion";
 
+import { 
+  SiJavascript, 
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiPrisma,
+  SiTailwindcss,
+  SiCss3,
+  SiHtml5,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiPostgresql,
+  SiMysql,
+  SiRedis,
+  SiDocker,
+  SiKubernetes,
+  SiAmazon,
+  SiVercel,
+  SiNetlify,
+  SiFirebase,
+  SiSupabase,
+  SiGraphql,
+  SiApollographql,
+  SiStrapi,
+  SiContentful,
+  SiSanity,
+  SiWordpress,
+  SiGithubactions,
+  SiJenkins,
+  SiAdobexd,
+  SiSketch,
+  SiJest,
+  SiCypress,
+  SiGit,
+  SiGitlab,
+  SiBitbucket,
+  SiSass,
+  SiLess,
+  SiStyledcomponents,
+  SiMui,
+  SiAntdesign,
+  SiBootstrap,
+  SiWebpack,
+  SiVite,
+  SiBabel,
+  SiEslint,
+  SiPrettier,
+  SiPython,
+  SiOpenjdk,
+  SiPhp,
+  SiLaravel,
+  SiDjango,
+  SiFlask,
+  SiSpring,
+  SiDotnet,
+  SiPostman
+} from 'react-icons/si';
+
 export const skills: Skill[] = [
   {
     id: "javascript",
     name: "JavaScript",
-    icon: "SiJavascript",
+    icon: SiJavascript,
     color: "#F7DF1E",
   },
   {
     id: "typescript",
     name: "TypeScript",
-    icon: "SiTypescript",
+    icon: SiTypescript,
     color: "#3178C6",
   },
   {
     id: "react",
     name: "React",
-    icon: "SiReact",
+    icon: SiReact,
     color: "#61DAFB",
   },
   {
     id: "nextjs",
     name: "Next.js",
-    icon: "SiNextdotjs",
+    icon: SiNextdotjs,
     color: "#000000",
   },
   {
     id: "prisma",
     name: "Prisma",
-    icon: "SiPrisma",
+    icon: SiPrisma,
     color: "#2D3748",
   },
   {
     id: "tailwind",
     name: "Tailwind CSS",
-    icon: "SiTailwindcss",
+    icon: SiTailwindcss,
     color: "#06B6D4",
   },
   {
     id: "css",
     name: "CSS",
-    icon: "SiCss3",
+    icon: SiCss3,
     color: "#1572B6",
   },
   {
     id: "html",
     name: "HTML",
-    icon: "SiHtml5",
+    icon: SiHtml5,
     color: "#E34F26",
   },
   {
     id: "nodejs",
     name: "Node.js",
-    icon: "SiNodedotjs",
+    icon: SiNodedotjs,
     color: "#339933",
   },
   {
     id: "express",
     name: "Express.js",
-    icon: "SiExpress",
+    icon: SiExpress,
     color: "#000000",
   },
   {
     id: "mongodb",
     name: "MongoDB",
-    icon: "SiMongodb",
+    icon: SiMongodb,
     color: "#47A248",
   },
   {
     id: "postgresql",
     name: "PostgreSQL",
-    icon: "SiPostgresql",
+    icon: SiPostgresql,
     color: "#336791",
   },
   {
     id: "mysql",
     name: "MySQL",
-    icon: "SiMysql",
+    icon: SiMysql,
     color: "#4479A1",
   },
   {
     id: "redis",
     name: "Redis",
-    icon: "SiRedis",
+    icon: SiRedis,
     color: "#DC382D",
   },
   {
     id: "docker",
     name: "Docker",
-    icon: "SiDocker",
+    icon: SiDocker,
     color: "#2496ED",
   },
   {
     id: "kubernetes",
     name: "Kubernetes",
-    icon: "SiKubernetes",
+    icon: SiKubernetes,
     color: "#326CE5",
   },
   {
     id: "aws",
     name: "AWS",
-    icon: "SiAmazonaws",
+    icon: SiAmazon,
     color: "#FF9900",
   },
   {
     id: "vercel",
     name: "Vercel",
-    icon: "SiVercel", // Use react-icons/si - SiVercel
-    color: "#000000", // Vercel black
+    icon: SiVercel,
+    color: "#000000",
   },
   {
     id: "netlify",
     name: "Netlify",
-    icon: "SiNetlify", // Use react-icons/si - SiNetlify
-    color: "#00C7B7", // Netlify teal
+    icon: SiNetlify,
+    color: "#00C7B7",
   },
   {
     id: "firebase",
     name: "Firebase",
-    icon: "SiFirebase", // Use react-icons/si - SiFirebase
-    color: "#FFCA28", // Firebase yellow
+    icon: SiFirebase,
+    color: "#FFCA28",
   },
   {
     id: "supabase",
     name: "Supabase",
-    icon: "SiSupabase", // Use react-icons/si - SiSupabase
-    color: "#3ECF8E", // Supabase green
+    icon: SiSupabase,
+    color: "#3ECF8E",
   },
   {
     id: "graphql",
     name: "GraphQL",
-    icon: "SiGraphql", // Use react-icons/si - SiGraphql
-    color: "#E10098", // GraphQL pink
+    icon: SiGraphql,
+    color: "#E10098",
   },
   {
     id: "apollo",
     name: "Apollo GraphQL",
-    icon: "SiApollographql", // Use react-icons/si - SiApollographql
-    color: "#311C87", // Apollo purple
+    icon: SiApollographql,
+    color: "#311C87",
   },
   {
     id: "strapi",
     name: "Strapi CMS",
-    icon: "SiStrapi", // Use react-icons/si - SiStrapi
-    color: "#2F2E8B", // Strapi purple
+    icon: SiStrapi,
+    color: "#2F2E8B",
   },
   {
     id: "contentful",
     name: "Contentful",
-    icon: "SiContentful", // Use react-icons/si - SiContentful
-    color: "#2478CC", // Contentful blue
+    icon: SiContentful,
+    color: "#2478CC",
   },
   {
     id: "sanity",
     name: "Sanity CMS",
-    icon: "SiSanity", // Use react-icons/si - SiSanity
-    color: "#F03E2F", // Sanity red
+    icon: SiSanity,
+    color: "#F03E2F",
   },
   {
     id: "wordpress",
     name: "WordPress",
-    icon: "SiWordpress", // Use react-icons/si - SiWordpress
-    color: "#21759B", // WordPress blue
+    icon: SiWordpress,
+    color: "#21759B",
   },
   {
     id: "cicd",
     name: "CI/CD",
-    icon: GitBranch, // Keep Lucide for generic CI/CD
-    color: "#10B981", // Generic green
+    icon: GitBranch,
+    color: "#10B981",
   },
   {
     id: "github-actions",
     name: "GitHub Actions",
-    icon: "SiGithubactions", // Use react-icons/si - SiGithubactions
-    color: "#2088FF", // GitHub Actions blue
+    icon: SiGithubactions,
+    color: "#2088FF",
   },
   {
     id: "jenkins",
     name: "Jenkins",
-    icon: "SiJenkins", // Use react-icons/si - SiJenkins
-    color: "#D24939", // Jenkins red
+    icon: SiJenkins,
+    color: "#D24939",
   },
   {
     id: "figma",
     name: "Figma",
-    icon: Figma, // Lucide has the real Figma logo
-    color: "#F24E1E", // Figma orange-red
+    icon: Figma,
+    color: "#F24E1E",
   },
   {
     id: "adobe-xd",
     name: "Adobe XD",
-    icon: "SiAdobexd", // Use react-icons/si - SiAdobexd
-    color: "#FF61F6", // Adobe XD pink
+    icon: SiAdobexd,
+    color: "#FF61F6",
   },
   {
     id: "sketch",
     name: "Sketch",
-    icon: "SiSketch", // Use react-icons/si - SiSketch
-    color: "#F7B500", // Sketch yellow
+    icon: SiSketch,
+    color: "#F7B500",
   },
   {
     id: "jest",
     name: "Jest",
-    icon: "SiJest", // Use react-icons/si - SiJest
-    color: "#C21325", // Jest red
+    icon: SiJest,
+    color: "#C21325",
   },
   {
     id: "cypress",
     name: "Cypress",
-    icon: "SiCypress", // Use react-icons/si - SiCypress
-    color: "#17202C", // Cypress dark
-  },
-  {
-    id: "playwright",
-    name: "Playwright",
-    icon: "SiPlaywright", // Use react-icons/si - SiPlaywright
-    color: "#2EAD33", // Playwright green
+    icon: SiCypress,
+    color: "#17202C",
   },
   {
     id: "git",
     name: "Git",
-    icon: "SiGit", // Use react-icons/si - SiGit
-    color: "#F05032", // Git orange-red
+    icon: SiGit,
+    color: "#F05032",
   },
   {
     id: "github",
     name: "GitHub",
-    icon: Github, // Lucide has the real GitHub logo
-    color: "#181717", // GitHub black
+    icon: Github,
+    color: "#181717",
   },
   {
     id: "gitlab",
     name: "GitLab",
-    icon: "SiGitlab", // Use react-icons/si - SiGitlab
-    color: "#FCA326", // GitLab orange
+    icon: SiGitlab,
+    color: "#FCA326",
   },
   {
     id: "bitbucket",
     name: "Bitbucket",
-    icon: "SiBitbucket", // Use react-icons/si - SiBitbucket
-    color: "#0052CC", // Bitbucket blue
+    icon: SiBitbucket,
+    color: "#0052CC",
   },
   {
     id: "sass",
     name: "SASS",
-    icon: "SiSass", // Use react-icons/si - SiSass
-    color: "#CC6699", // SASS pink
+    icon: SiSass,
+    color: "#CC6699",
   },
   {
     id: "less",
     name: "Less",
-    icon: "SiLess", // Use react-icons/si - SiLess
-    color: "#1D365D", // Less blue
+    icon: SiLess,
+    color: "#1D365D",
   },
   {
     id: "styled-components",
     name: "Styled Components",
-    icon: "SiStyledcomponents", // Use react-icons/si - SiStyledcomponents
-    color: "#DB7093", // Styled Components pink
+    icon: SiStyledcomponents,
+    color: "#DB7093",
   },
   {
     id: "materialui",
     name: "Material UI",
-    icon: "SiMui", // Use react-icons/si - SiMui
-    color: "#007FFF", // Material UI blue
+    icon: SiMui,
+    color: "#007FFF",
   },
   {
     id: "antd",
     name: "Ant Design",
-    icon: "SiAntdesign", // Use react-icons/si - SiAntdesign
-    color: "#0170FE", // Ant Design blue
+    icon: SiAntdesign,
+    color: "#0170FE",
   },
   {
     id: "bootstrap",
     name: "Bootstrap",
-    icon: "SiBootstrap", // Use react-icons/si - SiBootstrap
-    color: "#7952B3", // Bootstrap purple
-  },
-  {
-    id: "shadcn",
-    name: "shadcn/ui",
-    icon: "CustomShadcnIcon", // You'll need a custom SVG for this
-    color: "#000000", // shadcn black
+    icon: SiBootstrap,
+    color: "#7952B3",
   },
   {
     id: "webpack",
     name: "Webpack",
-    icon: "SiWebpack", // Use react-icons/si - SiWebpack
-    color: "#8DD6F9", // Webpack blue
+    icon: SiWebpack,
+    color: "#8DD6F9",
   },
   {
     id: "vite",
     name: "Vite",
-    icon: "SiVite", // Use react-icons/si - SiVite
-    color: "#646CFF", // Vite purple
-  },
-  {
-    id: "rollup",
-    name: "Rollup",
-    icon: "SiRollup", // Use react-icons/si - SiRollup
-    color: "#EC4A3F", // Rollup red
+    icon: SiVite,
+    color: "#646CFF",
   },
   {
     id: "babel",
     name: "Babel",
-    icon: "SiBabel", // Use react-icons/si - SiBabel
-    color: "#F9DC3E", // Babel yellow
+    icon: SiBabel,
+    color: "#F9DC3E",
   },
   {
     id: "eslint",
     name: "ESLint",
-    icon: "SiEslint", // Use react-icons/si - SiEslint
-    color: "#4B32C3", // ESLint purple
+    icon: SiEslint,
+    color: "#4B32C3",
   },
   {
     id: "prettier",
     name: "Prettier",
-    icon: "SiPrettier", // Use react-icons/si - SiPrettier
-    color: "#F7B93E", // Prettier yellow
+    icon: SiPrettier,
+    color: "#F7B93E",
   },
   {
     id: "python",
     name: "Python",
-    icon: "SiPython", // Use react-icons/si - SiPython
-    color: "#3776AB", // Python blue
+    icon: SiPython,
+    color: "#3776AB",
   },
   {
     id: "java",
     name: "Java",
-    icon: "SiOpenjdk", // Use react-icons/si - SiOpenjdk (for Java)
-    color: "#ED8B00", // Java orange
-  },
-  {
-    id: "csharp",
-    name: "C#",
-    icon: "SiCsharp", // Use react-icons/si - SiCsharp
-    color: "#239120", // C# green
+    icon: SiOpenjdk,
+    color: "#ED8B00",
   },
   {
     id: "php",
     name: "PHP",
-    icon: "SiPhp", // Use react-icons/si - SiPhp
-    color: "#777BB4", // PHP purple
+    icon: SiPhp,
+    color: "#777BB4",
   },
   {
     id: "laravel",
     name: "Laravel",
-    icon: "SiLaravel", // Use react-icons/si - SiLaravel
-    color: "#FF2D20", // Laravel red
+    icon: SiLaravel,
+    color: "#FF2D20",
   },
   {
     id: "django",
     name: "Django",
-    icon: "SiDjango", // Use react-icons/si - SiDjango
-    color: "#092E20", // Django green
+    icon: SiDjango,
+    color: "#092E20",
   },
   {
     id: "flask",
     name: "Flask",
-    icon: "SiFlask", // Use react-icons/si - SiFlask
-    color: "#000000", // Flask black
+    icon: SiFlask,
+    color: "#000000",
   },
   {
     id: "spring",
     name: "Spring",
-    icon: "SiSpring", // Use react-icons/si - SiSpring
-    color: "#6DB33F", // Spring green
+    icon: SiSpring,
+    color: "#6DB33F",
   },
   {
     id: "dotnet",
     name: ".NET",
-    icon: "SiDotnet",
+    icon: SiDotnet,
     color: "#512BD4",
   },
-  // New additions for CMS, API, OOP, PostgreSQL
   {
     id: "cms",
     name: "CMS",
-    icon: "SiContentful",
+    icon: SiContentful,
     color: "#2478CC",
   },
   {
     id: "api",
     name: "REST API",
-    icon: "SiPostman",
+    icon: SiPostman,
     color: "#FF6C37",
-  },
-  {
-    id: "oop",
-    name: "OOP",
-    icon: "SiCodereview",
-    color: "#4A90E2",
   },
   {
     id: "deployment",
     name: "Deployment",
     icon: Rocket,
     color: "#8B5CF6",
-  },
+  }
 ];
 
 export const projects: Project[] = [

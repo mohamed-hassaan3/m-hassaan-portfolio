@@ -12,7 +12,7 @@ const Header = () => {
           <Image src={logo} width={30} height={30} alt="logo" />
         </Link>
       </aside>
-      <nav className="flex items-center sm:gap-6 gap-1 *:hover:dark:text-neutral-200 sm:*:px-3 *:px-1 text-xs sm:text-lg">
+      <nav className="flex items-center md:gap-6 gap-1 *:hover:dark:text-neutral-200 sm:*:px-3 *:px-1 text-xs lg:text-lg">
         <Link href={"/"}>Home</Link>
         <Link href={"/projects"}>Projects</Link>
         <Link href={"/about"}>About</Link>

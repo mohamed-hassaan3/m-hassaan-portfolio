@@ -12,12 +12,12 @@ function Hero() {
   return (
     <div className="min-h-dvh flex flex-col justify-center w-full rounded-md dark:bg-neutral-950 relative items-center antialiased">
       {/* INTERDOUCTION CONTENT */}
-      <div className="max-w-2xl mx-auto p-4 min-h-[calc(100vh-500px)]">
+      <div className="max-w-2xl mx-auto p-4 min-h-[calc(100vh-500px)] ">
         <ShinyText
           text="Frontend Engineer"
           disabled={false}
           speed={3}
-          className="custom-class sm:text-6xl text-3xl text-center font-semibold whitespace-nowrap py-2"
+          className="custom-class lg:text-6xl md:text-base  text-3xl text-center font-semibold whitespace-nowrap py-2 lg:tracking-wider"
         />
 
         <BlurText
@@ -25,7 +25,7 @@ function Hero() {
           delay={150}
           animateBy="words"
           direction="top"
-          className="dark:text-neutral-200 max-w-lg mx-auto my-2 text-sm text-center relative z-10 sm:leading-6 tracking-wider font-extralight"
+          className="dark:text-neutral-200 max-w-lg mx-auto my-2 text-sm lg:text-base text-center relative z-10 sm:leading-6 tracking-wider font-extralight "
         />
       </div>
       {/* LOOP */}
@@ -47,11 +47,11 @@ function Hero() {
           <Image
             src={LOGO}
             alt="logo"
-            width={24}
-            height={24}
-            className="hidden sm:inline"
+            width={12}
+            height={12}
+            className="hidden sm:inline lg:w-6"
           />
-          <span>Know me better</span>
+          <span className="lg:text-base text-[8px]">Know me better</span>
         </AnimationButton>
       </div>
     </div>

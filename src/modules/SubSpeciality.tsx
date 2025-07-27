@@ -1,3 +1,4 @@
+"use client"
 import Title from "@/components/ui/Title";
 import {
   Accordion,
@@ -9,7 +10,8 @@ import { Sparkle } from "lucide-react";
 import React from "react";
 import { SpecialityProps } from "@/types/data";
 import Image from "next/image";
-import { speciality } from "@/data/data";
+import { skills, speciality } from "@/data/data";
+import InfintyMovingSkills from "@/components/InfintyMovingSkills";
 
 const SubSpeciality = () => {
   return (
@@ -39,8 +41,8 @@ const SubSpeciality = () => {
                 value={`item-${item.item}`}
                 className=" w-full "
               >
-                <AccordionTrigger className="!cursor-pointer font-bold tracking-wider hover:opacity-75 flex items-center gap-2">
-                  <span>{<item.icon size={35} />}</span>
+                <AccordionTrigger className="!cursor-pointer font-bold tracking-wider hover:opacity-75 flex items-center gap-2 md:gap-4 mb-2">
+                  <span>{<item.icon size={25} />}</span>
                   {item.title}
                 </AccordionTrigger>
                 <div className="flex flex-col md:flex-row gap-2 md:gap-6">
@@ -59,6 +61,9 @@ const SubSpeciality = () => {
             ))}
         </Accordion>
       </section>
+      <aside>
+       <InfintyMovingSkills items={skills} />
+      </aside>
     </article>
   );
 };

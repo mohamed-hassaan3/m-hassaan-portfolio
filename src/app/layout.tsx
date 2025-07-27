@@ -26,8 +26,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
+      {/* prevent zooming in mobile screen */}
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+      />
       <body
-        className={`${michome.className} ${geistMono.variable} antialiased `}
+        className={`${michome.className} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"
@@ -36,6 +41,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <div className="fixed bottom-0 left-0 right-0 h-[100px] bg-gradient-to-t from-neutral-950 to-transparent"></div>
           <Analytics />
         </ThemeProvider>
       </body>
