@@ -7,9 +7,9 @@ export default function Home() {
     <Layout>
       <Hero />
       <SubAbout />
-      {/* <SubProjects />
+      <SubProjects />
       <SubSpeciality />
-      <SubFooter /> */}
+      <SubFooter />
     </Layout>
   );
 }
