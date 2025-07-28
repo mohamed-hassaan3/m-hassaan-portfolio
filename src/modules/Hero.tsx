@@ -29,7 +29,7 @@ function Hero() {
         />
       </div>
       {/* LOOP */}
-      <div className=" absolute bottom-0 w-full z-30">
+      <div className=" absolute bottom-0 sm:-bottom-6 w-full z-30">
         <CurvedLoop
           marqueeText="Community ✦ Creative ✦ Development ✦ Websites ✦ Mentor ✦ Animations ✦ "
           speed={3}

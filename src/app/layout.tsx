@@ -3,6 +3,7 @@ import { Geist_Mono, Michroma } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Analytics } from "@vercel/analytics/next";
+import NextTopLoader from "nextjs-toploader";
 
 const michome = Michroma({
   weight: "400",
@@ -40,6 +41,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <NextTopLoader color="#b5ff6d" showSpinner={false} />
           {children}
           <div className="fixed bottom-0 left-0 right-0 h-[100px] bg-gradient-to-t from-neutral-950 to-transparent"></div>
           <Analytics />

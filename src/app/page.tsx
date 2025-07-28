@@ -1,4 +1,5 @@
 import { SubProjects, Hero, Layout, SubAbout } from "@/modules";
+import SubFooter from "@/modules/SubFooter";
 import SubSpeciality from "@/modules/SubSpeciality";
 
 export default function Home() {
@@ -6,8 +7,9 @@ export default function Home() {
     <Layout>
       <Hero />
       <SubAbout />
-      <SubProjects />
+      {/* <SubProjects />
       <SubSpeciality />
+      <SubFooter /> */}
     </Layout>
   );
 }
