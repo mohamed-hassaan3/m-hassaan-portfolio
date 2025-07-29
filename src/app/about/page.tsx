@@ -1,11 +1,18 @@
-import React from 'react'
+import { Layout } from "@/modules";
+import { HeroAbout } from "@/modules/about";
+import { Metadata } from "next";
+import React from "react";
+
+export const metadata: Metadata = {
+  title: "About",
+};
 
 const page = () => {
   return (
-    <div>
-      About
-    </div>
-  )
-}
+    <Layout>
+      <HeroAbout />
+    </Layout>
+  );
+};
 
-export default page
+export default page;

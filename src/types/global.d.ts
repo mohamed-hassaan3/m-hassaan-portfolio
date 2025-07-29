@@ -7,6 +7,6 @@ declare global {
   };
   type TitleProps = {
     text: string
-    icon: React.ReactNode
+    icon?: React.ReactNode
   }
 }
