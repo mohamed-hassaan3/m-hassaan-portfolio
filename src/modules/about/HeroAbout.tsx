@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <article className="min-h-dvh m-auto sm:w-[80%] relative flex">
       <section className="w-full md:absolute top-1/2 left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:flex items-center justify-center gap-12 space-y-12 md:space-y-0">
-        <aside className="xl:w-[35%] w-1/2 relative">
+        <aside className="xl:w-[35%] relative">
           <Image
             src={PROFILE_IMG}
             width={300}
@@ -27,7 +27,7 @@ const Hero = () => {
             className="custom-class !absolute -bottom-12 -right-12 bg-neutral-800 !p-12 !font-thin hidden xl:block"
           />
         </aside>
-        <aside className="xl:w-[65%] w-1/2 *:float-left">
+        <aside className="xl:w-[65%] *:float-left">
           <Title text="Frontend Engineer" />
           <BlurText
             text={`I'm  Mohamed, Passionate Frontend Engineer skilled in React.js, Next.js, Redux, and Strapi for headless CMS. I craft responsive, user-focused interfaces with HTML, CSS, Tailwind, and Sass, while leveraging Jest for testing and CI/CD pipelines for seamless deployment. I deliver polished, end-to-end web solutions that blend technical precision with stunning design.`}
