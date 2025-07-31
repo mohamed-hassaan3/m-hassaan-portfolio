@@ -1,8 +1,7 @@
 "use client";
 
-import ShinyText from "@/components/ui/animation/ShinyText";
-import AnimationButton from "@/components/ui/AnimationButton";
-import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
+import { AnimationButton, HeroHighlight, Highlight } from "@/components/ui";
+import { ShinyText } from "@/components/ui/animation";
 import { motion } from "motion/react";
 import React from "react";
 
@@ -11,9 +10,9 @@ const SubFooter = () => {
     <article>
       <section className="sm:w-[80%] m-auto">
         <HeroHighlight>
-            <aside className="text-center my-12 sm:tracking-widest bg-neutral-950 w-fit m-auto p-2 rounded-4xl">
-               <ShinyText text="Available for Work" />
-            </aside>
+          <aside className="realtive text-center my-12 sm:tracking-widest bg-neutral-950 w-fit m-auto p-2 rounded-4xl">
+            <ShinyText text="Available for Work" />
+          </aside>
           <motion.h1
             initial={{
               opacity: 0,

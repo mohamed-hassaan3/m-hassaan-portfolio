@@ -1,4 +1,4 @@
-import Title from "@/components/ui/Title";
+import {Title} from "@/components/ui";
 import React from "react";
 import { Sparkle } from "lucide-react";
 import ScrollReveal from "@/components/ui/animation/ScrollReveal";

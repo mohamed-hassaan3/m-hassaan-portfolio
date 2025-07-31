@@ -1,12 +1,9 @@
 "use client";
-import BlurText from "@/components/ui/animation/BlurText";
-import CurvedLoop from "@/components/ui/animation/CurvedLoop";
-import ShinyText from "@/components/ui/animation/ShinyText";
-import AnimationButton from "@/components/ui/AnimationButton";
-import { BackgroundBeams } from "@/components/ui/background-beams";
 import Image from "next/image";
 import React from "react";
 import LOGO from "../../public/assets/avatar.svg";
+import { BlurText, CurvedLoop, ShinyText } from "@/components/ui/animation";
+import { AnimationButton, BackgroundBeams } from "@/components/ui";
 
 function Hero() {
   return (

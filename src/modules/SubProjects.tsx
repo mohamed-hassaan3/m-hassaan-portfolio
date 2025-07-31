@@ -1,9 +1,8 @@
-import { RegularCardMap } from "@/components/ui/card/RegularCardMap";
-import Title from "@/components/ui/Title";
-import { Sparkle } from "lucide-react";
 import React from "react";
+import { RegularCardMap } from "@/components/ui/card/RegularCardMap";
+import {AnimationButton, Title} from "@/components/ui";
+import { Sparkle } from "lucide-react";
 import { projects } from "@/data/data";
-import AnimationButton from "@/components/ui/AnimationButton";
 
 const SubProjects = () => {
   // control How many cards you could be render

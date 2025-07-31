@@ -1,4 +1,9 @@
-import { Project, Skill, SpecialityProps } from "@/types/data";
+import {
+  ExperiencesProps,
+  Project,
+  Skill,
+  SpecialityProps,
+} from "@/types/data";
 import {
   //   Database,
   //   Container,
@@ -29,8 +34,13 @@ import {
 } from "../../public/images/projects";
 import { development, deployment, design } from "../../public/images/accordion";
 
-import { 
-  SiJavascript, 
+import UPWORK from "../../public/images/experience/upwork.webp";
+import SELFEMPLOYE from "../../public/images/experience/selfEmployed.webp";
+import SELFEMPLOYELEAD from "../../public/images/experience/selfEmployedLead.webp";
+import PRD from "../../public/images/experience/prd.webp";
+
+import {
+  SiJavascript,
   SiTypescript,
   SiReact,
   SiNextdotjs,
@@ -68,8 +78,8 @@ import {
   SiEslint,
   SiPrettier,
   SiPython,
-  SiPostman
-} from 'react-icons/si';
+  SiPostman,
+} from "react-icons/si";
 
 export const skills: Skill[] = [
   {
@@ -335,7 +345,7 @@ export const skills: Skill[] = [
     name: "Deployment",
     icon: Rocket,
     color: "#8B5CF6",
-  }
+  },
 ];
 
 export const projects: Project[] = [
@@ -530,7 +540,7 @@ export const speciality: SpecialityProps[] = [
     icon: CodeXml,
     desc: "Building responsive websites. Providing the users an enriching experience that responds to any device and screen size.",
     img: development,
-    item: 1
+    item: 1,
   },
   {
     slug: "ui-ux-design",
@@ -538,7 +548,7 @@ export const speciality: SpecialityProps[] = [
     icon: PenTool,
     desc: "Designing user-centric, modern interfaces that shapes how the audience interacts with the product.",
     img: design,
-    item: 2
+    item: 2,
   },
   {
     slug: "deployment",
@@ -546,6 +556,65 @@ export const speciality: SpecialityProps[] = [
     icon: Container,
     desc: "The software development lifecycle that bridges development and user accessibility, ensuring the successful delivery of new software versions or updates.",
     img: deployment,
-    item: 3
+    item: 3,
+  },
+];
+
+export const experiences: ExperiencesProps[] = [
+  {
+    item: 1,
+    slug: "frontend-engineer",
+    profession: "Frontend Engineer",
+    dates: "Mar 2024 - Present",
+    logo: UPWORK,
+    name: "Upwork - Freelance",
+    details: [
+      "Integrated REST APIs and Prisma ORM for efficient data flows and full-stack connectivity.",
+      "Managed CI/CD pipelines using Webpack, Docker, and GitHub Actions for automated deployment.",
+      "Migrated legacy codebases to modern React/Next.js architectures, improving scalability and performance.",
+      "Authored internal technical documentation and contributed to onboarding strategies, reducing ramp-up time by 30%.",
+      "Translated business requirements into modular and reusable UI components.",
+    ],
+  },
+  {
+    item: 2,
+    slug: "web-engineer",
+    profession: "Web Engineer",
+    dates: "May 2024 - Dec 2024",
+    logo: SELFEMPLOYE,
+    name: "Self Employed",
+    details: [
+      "Built responsive, SEO-optimized full-stack web apps using Next.js, Prisma, and TypeScript.",
+      "Designed robust authentication flows and managed real-time data with Supabase + PostgreSQL.",
+      "Integrated Sanity CMS for scalable content delivery and streamlined editorial workflows.",
+      "Implemented CI/CD and Git-based version control for rapid iteration and clean deployment cycles.",
+    ],
+  },
+  {
+    item: 3,
+    slug: "web-developer",
+    profession: "Web Developer",
+    dates: "May 2023 - Apr 2024",
+    logo: PRD,
+    name: "PRD oil&gas construction",
+    details: [
+      "Boosted organic traffic by 20% through structured data markup and on-page SEO improvements.",
+      "Leveraged Service Workers and caching strategies to reduce server load and enhance performance.",
+      "Elevated test coverage to 90% using automated testing pipelines, improving release reliability.",
+      "Participated in peer code reviews and dev QA sessions to enforce code quality and reduce regressions.",
+    ],
+  },
+  {
+    item: 4,
+    slug: "frontend-developer",
+    profession: "Frontend Developer",
+    dates: "Sep 2021 - Apr 2023",
+    logo: SELFEMPLOYELEAD,
+    name: "Upwork - Freelance",
+    details: [
+      "Developed mobile-responsive interfaces resulting in a 12% lift in conversion.",
+      "Debugged critical issues under 24 hours, maintaining SLA uptime across high-traffic applications.",
+      "Assisted in codebase modernization and integrated i18n/l10n support for multilingual platforms.",
+    ],
   },
 ];

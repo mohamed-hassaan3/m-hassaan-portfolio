@@ -11,7 +11,7 @@ import React from "react";
 import { SpecialityProps } from "@/types/data";
 import Image from "next/image";
 import { skills, speciality } from "@/data/data";
-import InfintyMovingSkills from "@/components/InfintyMovingSkills";
+import {InfintyMovingSkills} from "@/components/ui/animation/index";
 
 const SubSpeciality = () => {
   return (
@@ -39,7 +39,7 @@ const SubSpeciality = () => {
               <AccordionItem
                 key={item.slug}
                 value={`item-${item.item}`}
-                className=" w-full "
+                className="w-full "
               >
                 <AccordionTrigger className="!cursor-pointer font-bold tracking-wider hover:opacity-75 flex items-center gap-2 md:gap-4 mb-2">
                   <span>{<item.icon size={25} />}</span>
@@ -62,7 +62,7 @@ const SubSpeciality = () => {
         </Accordion>
       </section>
       <aside>
-       <InfintyMovingSkills items={skills} />
+            <InfintyMovingSkills items={skills}/>
       </aside>
     </article>
   );

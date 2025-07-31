@@ -1,6 +1,6 @@
 import React from "react";
-import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 import { Skill } from "@/types/data";
+import { InfiniteMovingCards } from "../infinite-moving-cards";
 
 const InfintyMovingSkills = ({ items }: { items: Skill[] }) => {
   return (

@@ -1,5 +1,5 @@
-import { Layout } from "@/modules";
-import { HeroAbout } from "@/modules/about";
+import { Layout, SubFooter } from "@/modules";
+import { Awards, DesignProcess, Eductian, Experience, HeroAbout } from "@/modules/about";
 import { Metadata } from "next";
 import React from "react";
 
@@ -9,8 +9,13 @@ export const metadata: Metadata = {
 
 const page = () => {
   return (
-    <Layout>
+    <Layout className="md:w-[80%] m-auto">
       <HeroAbout />
+      <Experience />
+      <DesignProcess />
+      <Awards />
+      <Eductian />
+      <SubFooter />
     </Layout>
   );
 };

@@ -2,32 +2,41 @@
 import Image from "next/image";
 import React from "react";
 import PROFILE_IMG from "../../../public/images/profile-img.webp";
-import Title from "@/components/ui/Title";
-import BlurText from "@/components/ui/animation/BlurText";
-import AnimationButton from "@/components/ui/AnimationButton";
-import CircularText from "@/components/ui/animation/CircularText";
-import InfintyMovingSkills from "@/components/InfintyMovingSkills";
+import { Title, AnimationButton } from "@/components/ui";
 import { skills } from "@/data/data";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import {
+  InfintyMovingSkills,
+  CircularText,
+  BlurText,
+} from "@/components/ui/animation";
+
 const Hero = () => {
   return (
-    <article className="min-h-dvh m-auto sm:w-[80%] relative flex">
-      <section className="w-full md:absolute top-1/2 left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:flex items-center justify-center gap-12 space-y-12 md:space-y-0">
-        <aside className="xl:w-[35%] relative">
+    <article className="min-h-dvh  relative flex">
+      <section className="w-full lg:flex items-center justify-center gap-12 space-y-12 md:space-y-0">
+        <aside className="xl:w-[40%] lg:w-[50%] relative md:shrink-0">
           <Image
             src={PROFILE_IMG}
             width={300}
             height={600}
             alt="profile_img"
-            className="w-full h-[400] sm:h-[600]  object-cover rounded-b-full "
+            className="w-full object-cover rounded-b-full md:mb-12 sm:mb-6"
           />
-          <CircularText
-            text=" Lets * Build * Creative * APP * "
-            onHover="speedUp"
-            spinDuration={20}
-            className="custom-class !absolute -bottom-12 -right-12 bg-neutral-800 !p-12 !font-thin hidden xl:block"
-          />
+          <Link href={"/contact"} className="hidden xl:block">
+            <div className=" absolute p-7 right-0 bottom-12 z-20 border rounded-full hover:-rotate-45 translate duration-75">
+              <ArrowRight />
+            </div>
+            <CircularText
+              text=" Lets * Build * Creative * APP * "
+              onHover="pause"
+              spinDuration={20}
+              className="custom-class !absolute bottom-0 -right-12 bg-neutral-800 !p-12 !font-thin"
+            />
+          </Link>
         </aside>
-        <aside className="xl:w-[65%] *:float-left">
+        <aside className="xl:w-[60%] lg:w-[50%] md:shrink-0 *:float-left">
           <Title text="Frontend Engineer" />
           <BlurText
             text={`I'm  Mohamed, Passionate Frontend Engineer skilled in React.js, Next.js, Redux, and Strapi for headless CMS. I craft responsive, user-focused interfaces with HTML, CSS, Tailwind, and Sass, while leveraging Jest for testing and CI/CD pipelines for seamless deployment. I deliver polished, end-to-end web solutions that blend technical precision with stunning design.`}

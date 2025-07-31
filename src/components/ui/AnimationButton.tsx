@@ -1,8 +1,7 @@
 import { AnimationButtonProps } from "@/types/animation";
 import React from "react";
-import Magnet from "@/components/ui/animation/Magnet";
 import Link from "next/link";
-import { HoverBorderGradient } from "./animation/HoverBorderGradient";
+import { HoverBorderGradient, Magnet } from "./animation";
 
 const AnimationButton = ({
   children,

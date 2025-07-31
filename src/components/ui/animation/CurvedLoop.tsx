@@ -1,3 +1,4 @@
+"use client"
 import { CurvedLoopProps } from "@/types/animation";
 import {
   useRef,

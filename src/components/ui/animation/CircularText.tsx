@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect } from "react";
 import {
   motion,
@@ -6,7 +7,6 @@ import {
   MotionValue,
   Transition,
 } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 interface CircularTextProps {
   text: string;
   spinDuration?: number;
@@ -102,16 +102,14 @@ const CircularText: React.FC<CircularTextProps> = ({
 
   return (
     <motion.div
-      className={`m-0 mx-auto rounded-full w-[200px] h-[200px] relative font-black text-white text-center cursor-pointer origin-center ${className}`}
+      className={`m-0 mx-auto rounded-full w-[180px] h-[180px] relative font-black text-white text-center cursor-pointer origin-center ${className}`}
       style={{ rotate: rotation }}
       initial={{ rotate: 0 }}
       animate={controls}
       onMouseEnter={handleHoverStart}
       onMouseLeave={handleHoverEnd}
     >
-      <div className=" absolute p-9 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border rounded-full">
-        <ArrowRight />
-      </div>
+
       {letters.map((letter, i) => {
         const rotationDeg = (360 / letters.length) * i;
         const factor = Math.PI / letters.length;
@@ -122,7 +120,7 @@ const CircularText: React.FC<CircularTextProps> = ({
         return (
           <span
             key={i}
-            className="absolute inline-block p-4 inset-0 text-md transition-all duration-500 ease-[cubic-bezier(0,0,0,1)]"
+            className="absolute inline-block p-3 inset-0 text-md transition-all duration-500 ease-[cubic-bezier(0,0,0,1)]"
             style={{ transform, WebkitTransform: transform }}
           >
             {letter}

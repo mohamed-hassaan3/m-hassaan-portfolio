@@ -30,3 +30,13 @@ export interface SpecialityProps {
   img: StaticImageData
   item: number
 }
+
+export interface ExperiencesProps {
+  item: number
+  slug: string
+  profession: string
+  name: string
+  details: string[]
+  dates: string
+  logo: StaticImageData
+}
