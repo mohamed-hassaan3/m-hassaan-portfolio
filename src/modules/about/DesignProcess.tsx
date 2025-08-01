@@ -1,7 +1,7 @@
 import { Title } from "@/components/ui";
 import { GridItem } from "@/components/ui";
 import { designProcess } from "@/data/data";
-import { Box, Lock, Search, Settings, Sparkle, Sparkles } from "lucide-react";
+import { Sparkle } from "lucide-react";
 import React from "react";
 
 const DesignProcess = () => {
