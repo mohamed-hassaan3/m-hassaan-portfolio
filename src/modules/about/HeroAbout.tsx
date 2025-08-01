@@ -14,7 +14,7 @@ import {
 
 const Hero = () => {
   return (
-    <article className="min-h-dvh  relative flex">
+    <article className="min-h-dvh relative flex">
       <section className="w-full lg:flex items-center justify-center gap-12 space-y-12 md:space-y-0">
         <aside className="xl:w-[40%] lg:w-[50%] relative md:shrink-0">
           <Image
@@ -22,10 +22,10 @@ const Hero = () => {
             width={300}
             height={600}
             alt="profile_img"
-            className="w-full object-cover rounded-b-full md:mb-12 sm:mb-6"
+            className="w-full object-cover rounded-b-full md:mb-12 sm:mb-6 relative"
           />
           <Link href={"/contact"} className="hidden xl:block">
-            <div className=" absolute p-7 right-0 bottom-12 z-20 border rounded-full hover:-rotate-45 translate duration-75">
+            <div className="absolute p-7 right-0 bottom-12 z-20 border rounded-full hover:-rotate-45 translate duration-75">
               <ArrowRight />
             </div>
             <CircularText

@@ -19,5 +19,5 @@ export {
   ScrollReveal,
   ShinyText,
   StarBorder,
-  InfintyMovingSkills
+  InfintyMovingSkills,
 };

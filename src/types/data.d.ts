@@ -40,3 +40,12 @@ export interface ExperiencesProps {
   dates: string
   logo: StaticImageData
 }
+
+export interface DesignProcessProps {
+  id: string,
+  title: string
+  desc: string,
+  icon: LucideIcon
+  md: string
+  xl: string
+}

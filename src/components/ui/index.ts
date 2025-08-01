@@ -8,6 +8,8 @@ import { HeroHighlight, Highlight } from "./hero-highlight";
 import { InfiniteMovingCards } from "./infinite-moving-cards";
 import SocialIcons from "./SocialIcons";
 import Title from "./Title";
+import { GlowingEffect } from "./glowing-effect";
+import GridItem from "./GridItem";
 
 export {
   Accordion,
@@ -20,5 +22,7 @@ export {
   InfiniteMovingCards,
   SocialIcons,
   Title,
-  Highlight
+  Highlight,
+  GlowingEffect,
+  GridItem
 };

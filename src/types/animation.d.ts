@@ -1,7 +1,7 @@
 import React, { ReactNode, HTMLAttributes } from "react";
 
 export interface ShinyTextProps {
-  icon?: React.ReactNode
+  icon?: React.ReactNode;
   text: string;
   disabled?: boolean;
   speed?: number;
@@ -53,12 +53,12 @@ export interface MagnetProps extends HTMLAttributes<HTMLDivElement> {
   innerClassName?: string;
 }
 
-export type AnimationButtonProps ={
-  children: React.ReactNode
-  className?: string
-  onClick?: ()=>void
-  href: string
-}
+export type AnimationButtonProps = {
+  children: React.ReactNode;
+  className?: string;
+  onClick?: () => void;
+  href: string;
+};
 
 export interface ScrollRevealProps {
   children: ReactNode;
@@ -86,4 +86,23 @@ export interface AnimatedContentProps {
   threshold?: number;
   delay?: number;
   onComplete?: () => void;
+}
+
+export interface GlowingEffectProps {
+  blur?: number;
+  inactiveZone?: number;
+  proximity?: number;
+  spread?: number;
+  variant?: "default" | "white";
+  glow?: boolean;
+  className?: string;
+  disabled?: boolean;
+  movementDuration?: number;
+  borderWidth?: number;
+}
+export interface GridItemProps {
+  area: string;
+  icon: React.ReactNode;
+  title: string;
+  description: React.ReactNode;
 }
