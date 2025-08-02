@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Title, GridItem } from "@/components/ui";
 import {
   BrainCircuit,
@@ -7,6 +8,12 @@ import {
   ShieldCheck,
   Sparkle,
 } from "lucide-react";
+=======
+import { Title } from "@/components/ui";
+import { GridItem } from "@/components/ui";
+import { designProcess } from "@/data/data";
+import { Sparkle } from "lucide-react";
+>>>>>>> 827a6fc059f6eb5933ed8f304ca5c2c772df7cc6
 import React from "react";
 
 const DesignProcess = () => {
