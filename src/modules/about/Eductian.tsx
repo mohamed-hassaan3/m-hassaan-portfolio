@@ -1,11 +1,37 @@
-import React from 'react'
+import { Title } from "@/components/ui";
+import { Sparkle } from "lucide-react";
+import React from "react";
 
 const Eductian = () => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <article className="my-16 m-auto lg:grid grid-cols-6 gap-12">
+      <section className="*:float-left flex flex-col justify-start items-start space-y-4  mb-4 col-span-2">
+        <Title
+          text="Education"
+          icon={<Sparkle color={"var(--highlight)"} size={30} />}
+        />
+        <h1 className="lg:text-4xl lg:font-semibold leading-12">
+          GRADUATE & LANGUAGES
+        </h1>
+      </section>
+      <section className="*:text-sm *:font-semibold *:tracking-wider *:border-b *:py-4 col-span-4">
+        <aside className="flex justify-between">
+          <p className="w-1/2 leading-9">
+            Bachelor of quality control, Quality Engineer <br /> CAIRO / EGYPT
+          </p>
+          <p className="ml-auto text-neutral-300">2009 - 2013</p>
+        </aside>
+        <aside className="pb-4 space-y-6">
+          <p className="flex ">
+            Mother tongue <span className="ml-auto text-neutral-300">Arabic </span>
+          </p>
+          <p className="flex ">
+            Fluent <span className="ml-auto text-neutral-300">English </span>
+          </p>
+        </aside>
+      </section>
+    </article>
+  );
+};
 
-export default Eductian
+export default Eductian;

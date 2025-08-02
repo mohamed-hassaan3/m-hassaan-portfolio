@@ -1,5 +1,4 @@
 import {
-  DesignProcessProps,
   ExperiencesProps,
   Project,
   Skill,
@@ -621,48 +620,5 @@ export const experiences: ExperiencesProps[] = [
       "Debugged critical issues under 24 hours, maintaining SLA uptime across high-traffic applications.",
       "Assisted in codebase modernization and integrated i18n/l10n support for multilingual platforms.",
     ],
-  },
-];
-
-export const designProcess: DesignProcessProps[] = [
-  {
-    id: "01",
-    title: "Strategize",
-    desc: "To create something awesome, one must first talk about the details. Planning is essential.",
-    icon: BrainCircuit,
-    md: "1/1/2/7",
-    xl: "1/1/2/5"
-  },
-  {
-    id: "02",
-    title: "Wireframe",
-    desc: "After hashing out the details of the website, it's easy to throw the ideas onto pen & paper.",
-    icon: PencilLine,
-    md: "1/7/2/13",
-    xl: "2/1/3/5"
-  },
-  {
-    id: "03",
-    title: "Design",
-    desc: "The most fun part of all - adding pizzaz to the wirefreames and bring it to life.",
-    icon: PencilRuler,
-    md: "2/1/3/7",
-    xl: "1/5/3/8"
-  },
-  {
-    id: "04",
-    title: "Development",
-    desc: "The design may be final but it needs to be functional and practical. Development is key.",
-    icon: CodeXml,
-    md: "2/7/3/13",
-    xl: "1/8/2/13"
-  },
-  {
-    id: "05",
-    title: "Quality Assurance",
-    desc: "Website load times, SEO, file optimization, etc., weigh in to the quality of the site.",
-    icon: ShieldCheck,
-    md: "3/1/4/13",
-    xl: "2/8/3/13"
   },
 ];
