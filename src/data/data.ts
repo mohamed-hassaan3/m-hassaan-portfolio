@@ -5,21 +5,13 @@ import {
   SpecialityProps,
 } from "@/types/data";
 import {
-  //   Database,
-  //   Container,
   GitBranch,
   Figma,
-  //   GitCommit,
   Github,
   Rocket,
   CodeXml,
   PenTool,
   Container,
-  PencilRuler,
-  ShieldCheck,
-  PencilLine,
-  BrainCircuit,
-  //   LucideIcon
 } from "lucide-react";
 
 import {
