@@ -54,7 +54,7 @@ export const FocusCard = React.memo(
               color="cyan"
               speed="5s"
             >
-              <a target="_blank" href={card.links.demo}>
+              <a target="_blank" href={card.links.demo}  aria-label={card.name}>
                 <DynamicIcon name="link" color="gray" size={24} />
               </a>
             </StarBorder>
@@ -66,7 +66,7 @@ export const FocusCard = React.memo(
               color="cyan"
               speed="5s"
             >
-              <a target="_blank" href={card.links.github}>
+              <a target="_blank" href={card.links.github} aria-label={card.name}>
                 <DynamicIcon name="github" color="gray" size={24} />
               </a>
             </StarBorder>

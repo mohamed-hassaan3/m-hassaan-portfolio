@@ -4,13 +4,13 @@ import React from "react";
 
 const Awards = () => {
   return (
-    <article className="my-16 m-auto lg:grid grid-cols-6 gap-12">
-      <section className="*:float-left flex flex-col justify-start items-start space-y-4 col-span-2 mb-4">
+    <article className="sm:my-16 m-auto lg:grid grid-cols-6 gap-12">
+      <section className="*:float-left flex flex-col justify-start items-start sm:space-y-4 col-span-2 mb-4">
         <Title
           text="AWARDS"
           icon={<Sparkle color={"var(--highlight)"} size={30} />}
         />
-        <h1 className="lg:text-4xl lg:font-semibold leading-12">
+        <h1 className="lg:text-4xl !text-xl  lg:font-semibold leading-12">
           Awards & Certifications
         </h1>
       </section>
