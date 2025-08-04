@@ -408,7 +408,7 @@ export const projects: Project[] = [
       "React Slick",
       "React Toastify",
     ],
-    category: "reactjs",
+    category: "React.js",
   },
   {
     slug: "3d-portfolio",
@@ -421,7 +421,7 @@ export const projects: Project[] = [
       github: "https://github.com/mohamed-hassaan3/3D_portfolio",
     },
     tech: ["React", "d3js", "tailwindCSS", "Three.js"],
-    category: "reactjs",
+    category: "React.js",
   },
   {
     slug: "oia-properties(Landing Page)",

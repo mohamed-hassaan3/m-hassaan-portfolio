@@ -8,7 +8,7 @@ export function RegularCardMap({
   countOfCard,
 }: {
   cards: Project[];
-  countOfCard: number;
+  countOfCard?: number;
 }) {
   const [hovered, setHovered] = useState<number | null>(null);
   return (

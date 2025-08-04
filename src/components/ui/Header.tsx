@@ -39,7 +39,7 @@ const Header = () => {
         </Link>
       </aside>
       <nav>
-        <ul className=" flex items-center md:gap-6 gap-1 *:hover:dark:text-neutral-200 sm:*:px-3 *:px-1 text-[10px] md:text-md font-extrabold tracking-wider">
+        <ul className=" flex items-center md:gap-6 gap-1 *:hover:dark:text-neutral-200 sm:*:px-3 *:px-1 text-[10px] md:text-base font-extrabold tracking-wider">
           {navItems.map((item) => (
             <li key={item.name} className={`relative ${pathname === item.path && "dark:text-neutral-200"}`}>
               <Link href={item.path}>{item.name}</Link>
