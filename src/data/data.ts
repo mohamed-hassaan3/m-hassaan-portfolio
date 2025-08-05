@@ -1,6 +1,7 @@
 import {
   ExperiencesProps,
   Project,
+  QuestionsProps,
   Skill,
   SpecialityProps,
 } from "@/types/data";
@@ -612,5 +613,32 @@ export const experiences: ExperiencesProps[] = [
       "Debugged critical issues under 24 hours, maintaining SLA uptime across high-traffic applications.",
       "Assisted in codebase modernization and integrated i18n/l10n support for multilingual platforms.",
     ],
+  },
+];
+
+export const questions: QuestionsProps[] = [
+  {
+    id: "01",
+    question: "What is your current role?",
+    answer:
+      "I take all kinds of development and designing related projects. Which includes UI/UX designing, frontend development, graphic designing.",
+  },
+  {
+    id: "02",
+    question: "How much does it cost for a high performing website?",
+    answer:
+      "It will depend upon the scope and requirements of the project. In a meeting, we will seek to identify specifics and objectives like number of pages, specific features, timeline, etc. All these will contribute to the cost and will vary from project to project.",
+  },
+  {
+    id: "03",
+    question: "How long will the work take from start to finish?",
+    answer:
+      "It will depend upon the scope and requirements of the project. A single landing page will take upto 1-3 weeks. A Full website with 8-10 pages may take 6-8 weeks.",
+  },
+  {
+    id: "04",
+    question: "Are you available to join as full time?",
+    answer:
+      "Yes, I am available to join as full time in a company that will allow me to showcase my creativity through crafting beautiful websites, designs and engaging experiences.",
   },
 ];

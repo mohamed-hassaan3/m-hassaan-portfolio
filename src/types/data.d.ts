@@ -40,3 +40,9 @@ export interface ExperiencesProps {
   dates: string
   logo: StaticImageData
 }
+
+export interface QuestionsProps {
+  id: string
+  question: string
+  answer: string
+}

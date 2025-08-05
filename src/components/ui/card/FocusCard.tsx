@@ -32,7 +32,7 @@ export const FocusCard = React.memo(
         alt={card.name}
         width={0}
         height={0}
-        className="object-cover absolute inset-0 md:aspect-video -translate-x-1/2 left-[50%] -translate-y-1/2 top-[50%] w-[75%] h-[75%] border-6 border-white rounded-4xl"
+        className="object-cover absolute inset-0 md:aspect-video -translate-x-1/2 left-[50%] -translate-y-1/2 top-[50%] lg:w-[75%] lg:h-[75%] w-full h-full border-6 border-white rounded-4xl"
       />
       <div
         className={cn(

@@ -8,12 +8,12 @@ const ProjectsFilter = ({
   return (
     <aside>
       <nav>
-        <ul className="flex items-center justify-center lg:justify-end flex-wrap sm:gap-4 gap-2 *:text-[8px] *:lg:text-base">
+        <ul className="flex items-center justify-center lg:justify-end flex-wrap sm:gap-4 gap-2 *:text-[10px] *:lg:text-base">
           {category.map((item) => (
             <li key={item}>
               <button
                 onClick={() => handleFilter(`${item}`)}
-                className="sm:px-4 p-1 sm:py-2  cursor-pointer hover:text-[var(--highlight)] hover:bg-neutral-800 transition duration-75 shadow-lg rounded-[12px] border-[1px] focus:text-[var(--highlight)] focus:bg-neutral-800"
+                className="sm:px-4 p-2 sm:py-2  cursor-pointer hover:text-[var(--highlight)] hover:bg-neutral-800 transition duration-75 shadow-lg rounded-[12px] border-[1px] focus:text-[var(--highlight)] focus:bg-neutral-800"
               >
                 {item}
               </button>
