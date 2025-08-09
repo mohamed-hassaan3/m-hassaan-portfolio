@@ -1,11 +1,57 @@
-import { HeroHighlight, SocialIcons, Title } from "@/components/ui";
+"use client";
+import { Title } from "@/components/ui";
 import { Sparkle } from "lucide-react";
-import Image from "next/image";
-import React from "react";
-import PROFILE from "../../../public/images/profile-img.webp";
-const ContactForm = () => {
+import CaontactCard from "./CaontactCard";
+import React, { ChangeEvent, useState } from "react";
+import { receiveEmail } from "@/utils/receiveEmail";
+import { sendEmail } from "@/utils/sendEmail";
+import { SplitText } from "@/components/ui/animation";
+
+const ContactForm: React.FC<UserValueProps> = () => {
+  const [userValue, setUserValue] = useState<UserValueProps>({
+    id: new Date(),
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState("");
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setUserValue((prev) => ({
+      ...prev,
+      id: new Date(),
+      [name]: value,
+    }));
+    console.log("FORM", userValue);
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const { name, email, message } = userValue;
+    if (!name || !email || !message) {
+      setStatus("Warning: Field is required");
+      return;
+    }
+    const received = await receiveEmail(email, name, message);
+    const sent = await sendEmail(email, name);
+    if (received.success && sent.success) {
+      setStatus("Success: Email sent, Thanks!");
+      setUserValue({
+        id: new Date(),
+        name: "",
+        email: "",
+        message: "",
+      });
+    } else {
+      setStatus("Error: Email failed to send.");
+    }
+  };
+
   return (
-    <article className="sm:my-32 my-16 m-auto sm:w-[80%]">
+    <article className="sm:mt-32 mt-16 m-auto sm:w-[80%]">
       <section className="*:float-left flex flex-col justify-start items-start sm:space-y-4 col-span-2 mb-4">
         <Title
           text="CONTACT WITH ME"
@@ -16,58 +62,82 @@ const ContactForm = () => {
         </h1>
       </section>
       <section className="md:mt-24 lg:grid grid-cols-2 sm:gap-6 gap-2 inset-0">
-        <form className="flex flex-col w-full mb-6 md:mb-0">
-          <div className="my-2">
-            <label>Full Name</label>
-            <input
-              className="border outline-none rounded-[6px] mt-1 w-full p-2"
-              type="text"
-            />
-          </div>
-          <div className="my-2">
-            <label>Email</label>
-            <input
-              className="border outline-none rounded-[6px] mt-1 w-full p-2"
-              type="email"
-            />
-          </div>
-          <div className="my-2">
-            <label>Message</label>
-            <textarea
-              className="border outline-none rounded-[6px] mt-1 w-full p-2 min-h-24 max-h-60"
-              rows={4}
-            />
-          </div>
-          <input
-            type="submit"
-            value="Submit"
-            className="border border-white hover:bg-neutral-700 cursor-pointer py-2 px-4 rounded-2xl mr-auto"
-          />
-        </form>
-        <HeroHighlight className="w-full !grid grid-cols-1 grid-rows-4 items-center relative">
-          <div className=" absolute p-4 flex flex-col xl:gap-4 gap-2 overflow-hidden">
-            <div className="sm:tracking-widest bg-neutral-950 w-fit p-2 rounded-4xl text-neutral-300">
-              Available for Work
-            </div>
-            <div className="border border-neutral-500 rounded-full w-fit p-4">
-              <Image
-                src={PROFILE}
-                width={400}
-                height={400}
-                alt="profile"
-                className="rounded-full w-16 h-16 object-cover"
+        {!status.toLowerCase().includes("success") ? (
+          <form
+            className="flex flex-col w-full mb-6 md:mb-0 *:text-[13px]"
+            onSubmit={handleSubmit}
+          >
+            <div className="my-2">
+              <label>Full Name</label>
+              <input
+                value={userValue.name || ""}
+                onChange={handleChange}
+                name="name"
+                className="border outline-none rounded-[6px] mt-1 w-full p-2"
+                type="text"
               />
             </div>
-            <h3 className="text-[12px] tracking-wider md:leading-6">
-              My inbox is always open, Whether you have a project or just want
-              to say Hi. I would love to hear from you. Feel free to contact me
-              and I&apos;ll get back to you.
-            </h3>
-            <div>
-              <SocialIcons />
+            <div className="my-2">
+              <label>Email</label>
+              <input
+                value={userValue.email || ""}
+                onChange={handleChange}
+                name="email"
+                className="border outline-none rounded-[6px] mt-1 w-full p-2"
+                type="email"
+              />
             </div>
-          </div>
-        </HeroHighlight>
+            <div className="my-2">
+              <label>Message</label>
+              <textarea
+                value={userValue.message || ""}
+                onChange={handleChange}
+                name="message"
+                className="border outline-none rounded-[6px] mt-1 w-full p-2 min-h-24 max-h-60"
+                rows={4}
+              />
+            </div>
+            <div className="flex justify-between sm:items-center">
+              <button
+                type="submit"
+                value="Submit"
+                className="border border-white hover:bg-neutral-700 cursor-pointer py-2 px-4 rounded-2xl mr-auto"
+              >
+                Submit
+              </button>
+              {status && (
+                <p
+                  className={`text-[10px] sm:text-base ${
+                    status.toLocaleLowerCase().includes("error")
+                      ? "text-red-600"
+                      : status.toLocaleLowerCase().includes("warning")
+                      ? "text-amber-600"
+                      : "text-[var(--highlight)]"
+                  } `}
+                >
+                  {status}
+                </p>
+              )}
+            </div>
+          </form>
+        ) : (
+          <SplitText
+            text={status}
+            className="md:text-2xl text-xl font-semibold text-center text-[var(--highlight)] my-12 md:my-auto flex content-center"
+            delay={100}
+            duration={0.6}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+          />
+        )}
+        <aside>
+          <CaontactCard />
+        </aside>
       </section>
     </article>
   );

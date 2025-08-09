@@ -9,4 +9,10 @@ declare global {
     text: string
     icon?: React.ReactNode
   }
+  type UserValueProps = {
+    id?: Date
+    name: string
+    email: string
+    message: string 
+  }
 }

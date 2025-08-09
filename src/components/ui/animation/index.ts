@@ -8,7 +8,7 @@ import ScrollReveal from "./ScrollReveal";
 import ShinyText from "./ShinyText";
 import StarBorder from "./StrarBorder";
 import InfintyMovingSkills from "./InfintyMovingSkills";
-
+import SplitText from "./SplitText";
 export {
   AnimatedContent,
   BlurText,
@@ -20,4 +20,5 @@ export {
   ShinyText,
   StarBorder,
   InfintyMovingSkills,
+  SplitText
 };

@@ -19,8 +19,7 @@ const DesignProcess = () => {
         />
         <h1 className="lg:text-4xl">My Design Process</h1>
         <p className="dark:text-neutral-400 sm:text-sm text-xs max-w-[75%]  md:max-w-[50%] xl:max-w-full">
-          I have worked with some of the most innovative industry leaders to
-          help build their top-notch products.
+          Attend meetings to clarify project goals, target audience, and functional requirements.
         </p>
       </section>
       <section  className="md:mt-12 mt-4">

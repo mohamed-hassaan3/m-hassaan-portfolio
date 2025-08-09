@@ -39,7 +39,7 @@ const SubSpeciality = () => {
               <AccordionItem
                 key={item.slug}
                 value={`item-${item.item}`}
-                className="w-full "
+                className="w-full"
               >
                 <AccordionTrigger className="!cursor-pointer font-bold tracking-wider hover:opacity-75 flex items-center gap-2 md:gap-4 mb-2">
                   <span>{<item.icon size={25} />}</span>
