@@ -7,7 +7,7 @@ import { receiveEmail } from "@/utils/receiveEmail";
 import { sendEmail } from "@/utils/sendEmail";
 import { SplitText } from "@/components/ui/animation";
 
-const ContactForm: React.FC<UserValueProps> = () => {
+const ContactForm = () => {
   const [userValue, setUserValue] = useState<UserValueProps>({
     id: new Date(),
     name: "",
