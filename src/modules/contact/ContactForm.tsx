@@ -6,7 +6,7 @@ import React, { ChangeEvent, useState } from "react";
 import { receiveEmail } from "@/utils/receiveEmail";
 import { sendEmail } from "@/utils/sendEmail";
 import { SplitText } from "@/components/ui/animation";
-
+import { SubmitHandler, useForm } from "react-hook-form";
 const ContactForm = () => {
   const [userValue, setUserValue] = useState<UserValueProps>({
     id: new Date(),
@@ -15,7 +15,12 @@ const ContactForm = () => {
     message: "",
   });
   const [status, setStatus] = useState("");
-  
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+  } = useForm<UserValueProps>();
+
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -28,8 +33,7 @@ const ContactForm = () => {
     console.log("FORM", userValue);
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const onSubmit: SubmitHandler<UserValueProps> = async () => {
     const { name, email, message } = userValue;
     if (!name || !email || !message) {
       setStatus("Warning: Field is required");
@@ -64,61 +68,66 @@ const ContactForm = () => {
       <section className="md:mt-24 lg:grid grid-cols-2 sm:gap-6 gap-2 inset-0">
         {!status.toLowerCase().includes("success") ? (
           <form
-            className="flex flex-col w-full mb-6 md:mb-0 *:text-[13px]"
-            onSubmit={handleSubmit}
+            className="flex flex-col w-full mb-6 md:mb-0 *:text-base"
+            onSubmit={handleSubmit(onSubmit)}
           >
             <div className="my-2">
               <label>Full Name</label>
               <input
+                {...register("name", { required: true })}
                 value={userValue.name || ""}
                 onChange={handleChange}
                 name="name"
-                className="border outline-none rounded-[6px] mt-1 w-full p-2"
                 type="text"
+                className={`border outline-none rounded-[6px] mt-1 w-full p-2 ${
+                  errors.name && "border-red-500"
+                }`}
               />
+              {errors.name && (
+                <small className="text-xs text-red-500">Name is required</small>
+              )}
             </div>
             <div className="my-2">
               <label>Email</label>
               <input
+                {...register("email", { required: true })}
                 value={userValue.email || ""}
                 onChange={handleChange}
                 name="email"
-                className="border outline-none rounded-[6px] mt-1 w-full p-2"
                 type="email"
+                className={`border outline-none rounded-[6px] mt-1 w-full p-2 ${
+                  errors.email && "border-red-500"
+                }`}
               />
+              {errors.email && (
+                <small className="text-xs text-red-500">Email is required</small>
+              )}
             </div>
             <div className="my-2">
               <label>Message</label>
               <textarea
+                {...register("message", { required: true })}
                 value={userValue.message || ""}
                 onChange={handleChange}
                 name="message"
-                className="border outline-none rounded-[6px] mt-1 w-full p-2 min-h-24 max-h-60"
+                className={`border outline-none rounded-[6px] mt-1 w-full p-2 min-h-24 max-h-60 ${
+                  errors.message && "border-red-500"
+                }`}
                 rows={4}
               />
-            </div>
-            <div className="flex justify-between sm:items-center">
-              <button
-                type="submit"
-                value="Submit"
-                className="border border-white hover:bg-neutral-700 cursor-pointer py-2 px-4 rounded-2xl mr-auto"
-              >
-                Submit
-              </button>
-              {status && (
-                <p
-                  className={`text-[10px] sm:text-base ${
-                    status.toLocaleLowerCase().includes("error")
-                      ? "text-red-600"
-                      : status.toLocaleLowerCase().includes("warning")
-                      ? "text-amber-600"
-                      : "text-[var(--highlight)]"
-                  } `}
-                >
-                  {status}
-                </p>
+              {errors.message && (
+                <small className="text-xs text-red-500">Message is required</small>
               )}
             </div>
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className={`${
+                isSubmitting ? "cursor-not-allowed" : "cursor-pointer "
+              } border border-white hover:bg-neutral-700 py-2 px-4 rounded-2xl mr-auto`}
+            >
+              {isSubmitting ? "Submitting..." : "Submit"}
+            </button>
           </form>
         ) : (
           <SplitText
