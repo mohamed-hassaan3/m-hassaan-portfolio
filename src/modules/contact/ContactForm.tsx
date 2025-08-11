@@ -14,12 +14,12 @@ const ContactForm = () => {
     email: "",
     message: "",
   });
-  const [status, setStatus] = useState("");
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
   } = useForm<UserValueProps>();
+  const [isSuccess, setIsSuccess] = useState(false)
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -36,13 +36,12 @@ const ContactForm = () => {
   const onSubmit: SubmitHandler<UserValueProps> = async () => {
     const { name, email, message } = userValue;
     if (!name || !email || !message) {
-      setStatus("Warning: Field is required");
       return;
     }
     const received = await receiveEmail(email, name, message);
     const sent = await sendEmail(email, name);
     if (received.success && sent.success) {
-      setStatus("Success: Email sent, Thanks!");
+      setIsSuccess(true)
       setUserValue({
         id: new Date(),
         name: "",
@@ -50,7 +49,7 @@ const ContactForm = () => {
         message: "",
       });
     } else {
-      setStatus("Error: Email failed to send.");
+      console.log("Error: Email failed to send.");
     }
   };
 
@@ -66,7 +65,21 @@ const ContactForm = () => {
         </h1>
       </section>
       <section className="md:mt-24 lg:grid grid-cols-2 sm:gap-6 gap-2 inset-0">
-        {!status.toLowerCase().includes("success") ? (
+        {isSuccess ? (
+          <SplitText
+            text={"Email Sent, Thanks!"}
+            className="md:text-2xl text-lg font-semibold text-center text-[var(--highlight)] my-12 md:my-auto flex content-center"
+            delay={100}
+            duration={0.6}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+          />
+        ) : (
           <form
             className="flex flex-col w-full mb-6 md:mb-0 *:text-base"
             onSubmit={handleSubmit(onSubmit)}
@@ -100,7 +113,9 @@ const ContactForm = () => {
                 }`}
               />
               {errors.email && (
-                <small className="text-xs text-red-500">Email is required</small>
+                <small className="text-xs text-red-500">
+                  Email is required
+                </small>
               )}
             </div>
             <div className="my-2">
@@ -116,33 +131,21 @@ const ContactForm = () => {
                 rows={4}
               />
               {errors.message && (
-                <small className="text-xs text-red-500">Message is required</small>
+                <small className="text-xs text-red-500">
+                  Message is required
+                </small>
               )}
             </div>
             <button
               type="submit"
               disabled={isSubmitting}
               className={`${
-                isSubmitting ? "cursor-not-allowed" : "cursor-pointer "
-              } border border-white hover:bg-neutral-700 py-2 px-4 rounded-2xl mr-auto`}
+                isSubmitting ? "cursor-not-allowed hover:bg-none" : "cursor-pointer hover:bg-neutral-700"
+              } border border-white py-2 px-4 rounded-2xl mr-auto`}
             >
               {isSubmitting ? "Submitting..." : "Submit"}
             </button>
           </form>
-        ) : (
-          <SplitText
-            text={status}
-            className="md:text-2xl text-lg font-semibold text-center text-[var(--highlight)] my-12 md:my-auto flex content-center"
-            delay={100}
-            duration={0.6}
-            ease="power3.out"
-            splitType="chars"
-            from={{ opacity: 0, y: 40 }}
-            to={{ opacity: 1, y: 0 }}
-            threshold={0.1}
-            rootMargin="-100px"
-            textAlign="center"
-          />
         )}
         <aside>
           <CaontactCard />

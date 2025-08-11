@@ -350,6 +350,8 @@ export const projects: Project[] = [
     slug: "dev-hub",
     name: "DevHub",
     description:
+      "A modern, full-stack blog application built with Next.js, TypeScript, Prisma, and ShadCN. This platform allows users to sign in with Google or GitHub, create posts, like and comment on them, and upload images. Deployed on Vercel, powered by Supabase and Cloudinary.",
+    features:
       "Social Pulse is a modern full-stack social media application built with Next.js and TypeScript, featuring Google and GitHub authentication via NextAuth. Users can create posts, like, and comment, with real-time functionality powered by Supabase. The UI is clean and responsive using Tailwind CSS and shadcn/ui, while media is handled efficiently through Cloudinary. Prisma ORM manages the relational data, and the entire app is deployed on Vercel for seamless performance and scalability.",
     src: devPlatform,
     links: {
@@ -373,6 +375,8 @@ export const projects: Project[] = [
     slug: "movie-night",
     name: "Movie Night",
     description:
+      "The Movie Night app allows you to search for your favorite actors, watch trailers, and explore the full career history of any actor. All the data provided is accurate and reliable, making it your go-to platform for movie and media enthusiasts.",
+    features:
       "A responsive movie database app built with Next.js, using React, Redux Toolkit, and Axios. It allows users to search and filter movies, TV shows, and actors. The app features dynamic server-side updates for real-time content and smooth state management, ensuring an optimized browsing experience across all devices, I configured the API for seamless data integration and made additional optimizations for production, ensuring fast load times and smooth performance across devices.",
     src: movieNight,
     links: {
@@ -394,6 +398,8 @@ export const projects: Project[] = [
     slug: "jacky-e-commerce",
     name: "Jacky E-Commerce",
     description:
+      "Welcome to the E-Commerce project repository! This project is built using React and Redux, along with several other libraries and tools. It aims to provide a feature-rich e-commerce platform with a focus on a seamless user experience and dynamically no stock no render item and then stock less than 10 Pcs render warning message .",
+    features:
       "Developed a dynamic e-commerce platform using React and Redux, featuring real-time stock management, coupon discount calculations, shipping charge estimations, and a smooth user interface. Implemented React Skeleton for seamless loading, Redux Thunk for asynchronous operations, Axios for API integration, and React Toastify for user notifications. The project also utilizes React Persist for maintaining state across sessions. This comprehensive solution showcases advanced front-end development skills, delivering an engaging and responsive online shopping experience.",
     src: jacky,
     links: {
@@ -415,6 +421,8 @@ export const projects: Project[] = [
     slug: "3d-portfolio",
     name: "3D Portfolio",
     description:
+      "Responsive portfolio featuring interactive 3D models and smooth animations, optimized for cross-device performance.",
+    features:
       "I developed a 3D portfolio website using React, and Three.js for animations. The site features interactive 3D models and animations, offering a unique and engaging user experience. My focus was on creating a responsive, dynamic interface that showcases my projects while maintaining smooth performance across devices.",
     src: animationPortfolio,
     links: {
@@ -425,9 +433,11 @@ export const projects: Project[] = [
     category: "React.js",
   },
   {
-    slug: "oia-properties(Landing Page)",
-    name: "Oia Properties (Landing Page)",
+    slug: "oia-properties",
+    name: "Oia Properties",
     description:
+      "Ois Properties is Landing Page and Dynamic presentation system with animated transitions, modern UI components, and immersive scroll-triggered animations.",
+    features:
       "Designing a presentation involves crafting a series of interactive slides using React components, incorporating Tailwind CSS for modern styling, and implementing GSAP animations to seamlessly enhance transitions and engage users with dynamic visual elements, ultimately creating an immersive and visually appealing experience.",
     src: oia,
     links: {
@@ -441,6 +451,8 @@ export const projects: Project[] = [
     slug: "ny-times",
     name: "NY Times",
     description:
+      "Full-featured task/project manager with real-time API data sync, async state management, and Redux Toolkit optimization.",
+    features:
       "In this project, we have developed a powerful Task Manager application using a cutting-edge tech stack that includes React, Redux Thunk, and Redux Toolkit. This application seamlessly retrieves and updates data from an external API, making it an ideal choice for managing tasks, projects, or any other data-driven workflow, Leveraging Redux Thunk for asynchronous actions, the application efficiently retrieves data from an external API. Redux Toolkit simplifies state management, allowing us to seamlessly integrate this data into the application's store.",
     src: nyTimes,
     links: {
@@ -454,6 +466,8 @@ export const projects: Project[] = [
     slug: "task-management",
     name: "Task Management",
     description:
+      "Authentication-protected task tracker with user sign-in/sign-up, form validation, and persistent data storage.",
+    features:
       "Task Management is an App using React, Hooks, and validation form and finally, you are able to store any updates in your App Once you sign-in you will get all your tasks in the same, then you have a simple sign-in & sign-up for the user and your app will be safe if you are not signed correctly.in the App, you will get the correct password '123456' simply if you have data in the backend store",
     src: taskApp,
     links: {
@@ -467,6 +481,8 @@ export const projects: Project[] = [
     slug: "map",
     name: "Map",
     description:
+      "Custom interactive map UI for UAE with dynamic vector tile rendering and real-time style/data updates.",
+    features:
       "I create Web App and data visualizations, with my most recent work being the development of a custom map UI built on GL JS for a UAE country. I work Primarily in JAVASCRIPT. Mapbox GL JS maps are dynamically rendered by combining vector tiles with style rules in the browser rather than on a server, which makes it possible to change the map's style and displayed data in response to user interaction.",
     src: map,
     links: {
@@ -480,6 +496,8 @@ export const projects: Project[] = [
     slug: "todo-list",
     name: "ToDo List",
     description:
+      "Task management tool featuring completion tracking, item deletion, and dropdown filtering for active/completed todos.",
+    features:
       "JavaScript Todo List helps you create a list of things you want to do throughout the day. Suppose you want to do something throughout the day that you can list here. Whenever you complete that task then you can delete it. I have taken select-dropdown to filter between the completed and uncompleted todo items help to create this Todo List as well.",
     src: todoList,
     links: {

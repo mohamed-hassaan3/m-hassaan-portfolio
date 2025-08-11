@@ -20,6 +20,7 @@ export interface Project {
   links: ProjectLink;
   tech: string[]; 
   category: string
+  features?: string
 }
 
 export interface SpecialityProps {
