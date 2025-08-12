@@ -349,6 +349,8 @@ export const projects: Project[] = [
   {
     slug: "dev-hub",
     name: "DevHub",
+    roles: "Full-Stack, Deployment, CI&CD",
+    client: "Upwork",
     description:
       "A modern, full-stack blog application built with Next.js, TypeScript, Prisma, and ShadCN. This platform allows users to sign in with Google or GitHub, create posts, like and comment on them, and upload images. Deployed on Vercel, powered by Supabase and Cloudinary.",
     features:
@@ -374,6 +376,8 @@ export const projects: Project[] = [
   {
     slug: "movie-night",
     name: "Movie Night",
+    roles: "Frontend, API, Deployment",
+    client: "Personal Project",
     description:
       "The Movie Night app allows you to search for your favorite actors, watch trailers, and explore the full career history of any actor. All the data provided is accurate and reliable, making it your go-to platform for movie and media enthusiasts.",
     features:
@@ -397,6 +401,8 @@ export const projects: Project[] = [
   {
     slug: "jacky-e-commerce",
     name: "Jacky E-Commerce",
+    roles: "Frontend, UI UX, DB",
+    client: "Fiver",
     description:
       "Welcome to the E-Commerce project repository! This project is built using React and Redux, along with several other libraries and tools. It aims to provide a feature-rich e-commerce platform with a focus on a seamless user experience and dynamically no stock no render item and then stock less than 10 Pcs render warning message .",
     features:
@@ -420,6 +426,8 @@ export const projects: Project[] = [
   {
     slug: "3d-portfolio",
     name: "3D Portfolio",
+    roles: "Animation, Web3, 3D",
+    client: "Personal Portfolio",
     description:
       "Responsive portfolio featuring interactive 3D models and smooth animations, optimized for cross-device performance.",
     features:
@@ -435,6 +443,8 @@ export const projects: Project[] = [
   {
     slug: "oia-properties",
     name: "Oia Properties",
+    roles: "Frontend, Landing PAge, UI UX",
+    client: "Oia Properties",
     description:
       "Ois Properties is Landing Page and Dynamic presentation system with animated transitions, modern UI components, and immersive scroll-triggered animations.",
     features:
@@ -450,6 +460,8 @@ export const projects: Project[] = [
   {
     slug: "ny-times",
     name: "NY Times",
+    roles: "Frontend, API, Real-Time Data",
+    client: "Personal Project",
     description:
       "Full-featured task/project manager with real-time API data sync, async state management, and Redux Toolkit optimization.",
     features:
@@ -465,6 +477,8 @@ export const projects: Project[] = [
   {
     slug: "task-management",
     name: "Task Management",
+    roles: "Full-Stack, Services, DB",
+    client: "Private Client",
     description:
       "Authentication-protected task tracker with user sign-in/sign-up, form validation, and persistent data storage.",
     features:
@@ -480,6 +494,8 @@ export const projects: Project[] = [
   {
     slug: "map",
     name: "Map",
+    roles: "Frontend, Map-Box, JS",
+    client: "Upwork",
     description:
       "Custom interactive map UI for UAE with dynamic vector tile rendering and real-time style/data updates.",
     features:
@@ -495,6 +511,8 @@ export const projects: Project[] = [
   {
     slug: "todo-list",
     name: "ToDo List",
+    roles: "Frontend, UI UX, DB",
+    client: "Personal Project",
     description:
       "Task management tool featuring completion tracking, item deletion, and dropdown filtering for active/completed todos.",
     features:
@@ -510,6 +528,8 @@ export const projects: Project[] = [
   {
     slug: "imac-email-template",
     name: "iMac Email Template",
+    roles: "XML, XHTML, UI UX",
+    client: "Upwork",
     description:
       "Extensible HyperText Markup Language (XHTML) is part of the family of XML markup languages. It mirrors or extends versions of the widely used HyperText Markup Language (HTML), the language in which Web pages are formulated. While HTML, prior to HTML5, was defined as an application of Standard Generalized Markup Language (SGML), a flexible markup language framework, XHTML is an application of XML, a more restrictive subset of SGML. XHTML documents are well-formed and may therefore be parsed using standard XML parsers, unlike HTML, which requires a lenient HTML-specific parser.",
     src: email,
@@ -523,6 +543,8 @@ export const projects: Project[] = [
   {
     slug: "vision-school",
     name: "VISION SCHOOL",
+    roles: "Frontend, UI UX, Landing Page",
+    client: "Private Client",
     description:
       "This task with designing and creating the landing page for a new school, cloud platform and responsive web design which aim to adjust the presentation on mobile devices. For this project I provided. I got a document which contains the positioning of the elements and compiling SASS to CSS on a page without specifying any other design information. I will help them by making informed design decisions about color and typography using the skills I have learned. will then implement the design.",
     src: vision,
@@ -536,6 +558,8 @@ export const projects: Project[] = [
   {
     slug: "future-vehicles",
     name: "Future Vehicles",
+    roles: "Frontend, UI UX",
+    client: "Upwork",
     description:
       "This project deals with E-health web application framework, cloud platform and responsive web design which aim to adjust the presentation on mobile devices. This work presents the whole development process of the self-care management web-app framework which provides instructive supports for future other Future-Vehicles field application. A prototype is developed by using CSS3, Java script and HTML5, DOM technologies.",
     src: future,

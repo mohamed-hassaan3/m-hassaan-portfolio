@@ -12,6 +12,7 @@ const LayoutProject = ({
   children: React.ReactNode;
   project: Project;
 }) => {
+  
   const projectIndex = projects.findIndex(
     (p: Project) => p.slug === project.slug
   );

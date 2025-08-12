@@ -1,6 +1,6 @@
 import LayoutProject from "@/components/ui/LayoutProject";
 import { projects } from "@/data/data";
-import { Layout } from "@/modules";
+import { Layout, SubFooter } from "@/modules";
 import HeroProject from "@/modules/project/HeroProject";
 import React from "react";
 
@@ -14,6 +14,7 @@ const Project = ({ params }: { params: { slug: string } }) => {
       {project ? (
         <LayoutProject project={project}>
           <HeroProject project={project} />
+          <SubFooter />
         </LayoutProject>
       ) : (
         <p>Project not found</p>
