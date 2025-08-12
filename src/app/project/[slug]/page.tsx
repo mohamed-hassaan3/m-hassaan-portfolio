@@ -4,10 +4,9 @@ import { Layout, SubFooter } from "@/modules";
 import HeroProject from "@/modules/project/HeroProject";
 import React from "react";
 
-const Project = ({ params }: { params: { slug: string } }) => {
-  const slug = params.slug;
+const Project = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const { slug } = await params;
   const project = projects.find((item) => item.slug === slug);
-  console.log("project", project);
 
   return (
     <Layout>

@@ -4,7 +4,6 @@ import Image from "next/image";
 import React from "react";
 
 const HeroProject = ({ project }: { project: Project }) => {
-  console.log(project);
   const {
     name,
     src,
@@ -53,10 +52,13 @@ const HeroProject = ({ project }: { project: Project }) => {
           </div>
           <div className="flex flex-wrap gap-2">
             {tech.map((t) => (
-            <span className="dark:bg-neutral-900 px-4 py-2 rounded-full text-[10px] sm:text-xs text-neutral-400" key={t}>
-              {t}
-            </span>
-          ))}
+              <span
+                className="dark:bg-neutral-900 px-4 py-2 rounded-full text-[10px] sm:text-xs text-neutral-400"
+                key={t}
+              >
+                {t}
+              </span>
+            ))}
           </div>
         </div>
         <p className="border-0 shadow-sm shadow-neutral-900 dark:bg-neutral-800 px-6 py-2 mt-6 w-fit rounded-xs">
