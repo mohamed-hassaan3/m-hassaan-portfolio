@@ -78,7 +78,7 @@ const ContactForm = () => {
         {isSuccess ? (
           <SplitText
             text={"Email Sent, Thanks!"}
-            className="md:text-2xl text-lg font-semibold text-center text-[var(--highlight)] my-12 md:my-auto flex content-center"
+            className="md:text-2xl text-lg text-center text-[var(--highlight)] my-12 md:my-auto flex content-center"
             delay={100}
             duration={0.6}
             ease="power3.out"

@@ -23,7 +23,7 @@ const Hero = () => {
             width={300}
             height={600}
             alt="profile_img"
-            className="w-full object-cover rounded-b-full relative"
+            className="w-full object-cover rounded-b-full relative lg:top-14 lg:ml-3"
           />
           <Link href={"/contact"} className="hidden xl:block">
             <div className="absolute p-7 right-0 bottom-12 z-20 border border-neutral-200 rounded-full hover:-rotate-45 translate duration-75 text-neutral-200">
@@ -37,7 +37,7 @@ const Hero = () => {
             />
           </Link>
         </aside>
-        <aside className="xl:w-[60%] lg:w-[50%] md:shrink-0 *:float-left">
+        <aside className="xl:w-[60%] lg:w-[50%] md:shrink-0 *:float-left xl:*:float-none">
           <BlurText
             text="Frontend Engineer"
             className="md:text-xl text-sm font-semibold tracking-wider dark:text-neutral-400 text-neutral-950"
@@ -47,7 +47,7 @@ const Hero = () => {
             delay={150}
             animateBy="words"
             direction="bottom"
-            className="dark:text-neutral-200 md:max-w-2xl mx-auto my-2 text-[11px] md:text-sm lg:text-base text-center relative z-10 sm:leading-8 leading-5 tracking-wider font-extralight "
+            className="dark:text-neutral-200 md:max-w-2xl mx-auto xl:mx-0 my-2 text-[11px] md:text-sm lg:text-base text-center relative z-10 sm:leading-8 leading-5 tracking-wider font-extralight "
           />
           <Magnet padding={50} disabled={false} magnetStrength={2} className="px-2 sm:text-lg  m-12 flex justify-center text-center">
             <HoverBorderGradient
@@ -65,7 +65,7 @@ const Hero = () => {
           </Magnet>
         </aside>
       </section>
-      <section className="-bottom-6 absolute border-y">
+      <section className="xl:-bottom-6 -bottom-4 absolute border-y xl:border-none">
         <InfintyMovingSkills items={skills} />
       </section>
     </article>

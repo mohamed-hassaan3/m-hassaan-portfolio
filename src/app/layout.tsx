@@ -16,12 +16,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://m-hassaan-portfolio.vercel.app/"),
   title: {
     default: "Frontend Egineer | Mohamed Hassaan",
     template: "%s | Mohamed Hassaan",
   },
   description:
     "Mohamed as a Frontend Engineer, Passionate about clean, accessible design and building fast, scalable web apps with modern technologies, decreasing server load by 25%. Skilled in Docker CI/CD workflows, Prisma, and performance optimization, ensuring robust application design.",
+  alternates: {
+    languages: {
+      "en-US": "/en-US",
+    },
+  },
+  openGraph: {
+    siteName: "Mohamed Protfolio",
+    type: "website",
+    url: "https://m-hassaan-portfolio.vercel.app/",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dx14mtfkw/image/upload/v1754750139/logo/logo-web_qmfbad.webp",
+        width: 800,
+        height: 600
+      }
+    ]
+  },
 };
 
 export default function RootLayout({

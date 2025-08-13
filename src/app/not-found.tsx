@@ -8,7 +8,7 @@ const NotFound = () => {
       <div className="tv-container">
         <div className="tv-screen">
           <div className="static" />
-          <div className="error-text">ERROR: 404</div>
+          <div className="error-text whitespace-nowrap">ERROR: 404</div>
         </div>
         <div className="tv-stand" />
       </div>

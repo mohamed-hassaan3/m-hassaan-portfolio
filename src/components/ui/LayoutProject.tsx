@@ -21,7 +21,7 @@ const LayoutProject = ({
   const prevProjectName = projects[projectIndex - 1];
 
   return (
-    <article className="sm:my-32 my-16 m-auto sm:w-[80%] md:space-y-16 space-y-4">
+    <article className="sm:mt-32 my-16 m-auto sm:w-[80%] md:space-y-16 space-y-4">
       <nav className="flex items-center gap-4 text-neutral-400 text-[10px] sm:text-xs hover:opacity-70 transition-all duration-300">
         <ArrowLeft size={20} />
         <Link href={"/projects"}>Back to Projects</Link>

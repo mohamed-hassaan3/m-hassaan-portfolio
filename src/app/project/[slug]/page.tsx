@@ -13,11 +13,11 @@ const Project = async ({ params }: { params: Promise<{ slug: string }> }) => {
       {project ? (
         <LayoutProject project={project}>
           <HeroProject project={project} />
-          <SubFooter />
         </LayoutProject>
       ) : (
         <p>Project not found</p>
       )}
+      <SubFooter />
     </Layout>
   );
 };
