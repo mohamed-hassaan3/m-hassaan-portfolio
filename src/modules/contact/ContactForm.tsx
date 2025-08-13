@@ -3,10 +3,9 @@ import { Title } from "@/components/ui";
 import { Sparkle } from "lucide-react";
 import CaontactCard from "./CaontactCard";
 import React, { ChangeEvent, useState } from "react";
-import { receiveEmail } from "@/utils/receiveEmail";
-import { sendEmail } from "@/utils/sendEmail";
 import { SplitText } from "@/components/ui/animation";
 import { SubmitHandler, useForm } from "react-hook-form";
+
 const ContactForm = () => {
   const [userValue, setUserValue] = useState<UserValueProps>({
     id: new Date(),
@@ -19,7 +18,7 @@ const ContactForm = () => {
     handleSubmit,
     formState: { errors, isSubmitting },
   } = useForm<UserValueProps>();
-  const [isSuccess, setIsSuccess] = useState(false)
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -35,13 +34,24 @@ const ContactForm = () => {
 
   const onSubmit: SubmitHandler<UserValueProps> = async () => {
     const { name, email, message } = userValue;
-    if (!name || !email || !message) {
-      return;
-    }
-    const received = await receiveEmail(email, name, message);
-    const sent = await sendEmail(email, name);
+    if (!name || !email || !message) return;
+
+    // Send message to you
+    const received = await fetch("/api/receiveEmail", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, message }),
+    }).then((res) => res.json());
+
+    // Send confirmation to client
+    const sent = await fetch("/api/sendEmail", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email }),
+    }).then((res) => res.json());
+
     if (received.success && sent.success) {
-      setIsSuccess(true)
+      setIsSuccess(true);
       setUserValue({
         id: new Date(),
         name: "",
@@ -140,7 +150,9 @@ const ContactForm = () => {
               type="submit"
               disabled={isSubmitting}
               className={`${
-                isSubmitting ? "cursor-not-allowed hover:bg-none" : "cursor-pointer hover:bg-neutral-700"
+                isSubmitting
+                  ? "cursor-not-allowed hover:bg-none"
+                  : "cursor-pointer hover:bg-neutral-700"
               } border border-white py-2 px-4 rounded-2xl mr-auto`}
             >
               {isSubmitting ? "Submitting..." : "Submit"}
