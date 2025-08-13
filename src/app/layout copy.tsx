@@ -40,26 +40,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  keywords: [
-    "Frontend Engineer",
-    "Next.js",
-    "React",
-    "JavaScript",
-    "TypeScript",
-    "Restful API",
-    "Jest",
-    "CMS",
-  ],
-  authors: [
-    { name: "Mohamed H", url: "https://m-hassaan-portfolio.vercel.app/" },
-  ],
-  creator: "Mohamed Hassaan",
-  publisher: "Mohamed.H",
-  formatDetection: {
-    email: true,
-    address: true,
-    telephone: true,
-  },
   twitter: {
     card: "summary_large_image",
   },
