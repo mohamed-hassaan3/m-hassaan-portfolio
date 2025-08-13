@@ -36,9 +36,12 @@ export const metadata: Metadata = {
       {
         url: "https://res.cloudinary.com/dx14mtfkw/image/upload/v1754750139/logo/logo-web_qmfbad.webp",
         width: 800,
-        height: 600
-      }
-    ]
+        height: 600,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 
