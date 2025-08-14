@@ -7,9 +7,9 @@ import React from "react";
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const slug = params.slug;
+  const {slug} = await params;
   const project = projects.find((item) => item.slug === slug);
 
   if (!project) {

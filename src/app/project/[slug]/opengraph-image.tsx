@@ -7,7 +7,18 @@ export const runtime = "edge";
 export default async function Image({ params }: { params: { slug: string } }) {
   const slug = params.slug;
   const project = projects.find((item) => item.slug === slug);
-  if(!project) return {}
+  
+  if (!project)
+    return {
+      title: "Project Not Found",
+      description: "No project found for this slug.",
+      openGraph: {
+        title: "Project Not Found",
+        description: "No project found for this slug.",
+        images: ["https://m-hassaan-portfolio.vercel.app/opengraph-image.png"],
+        url: `https://m-hassaan-portfolio.vercel.app/project/${slug}`,
+      },
+    };
   try {
     return new ImageResponse(
       (
@@ -25,7 +36,9 @@ export default async function Image({ params }: { params: { slug: string } }) {
             {project.name}
           </div>
           {project.description && (
-            <div style={{ fontSize: 32, fontWeight: 400 }}>{project.description}</div>
+            <div style={{ fontSize: 32, fontWeight: 400 }}>
+              {project.description}
+            </div>
           )}
         </div>
       ),
@@ -37,5 +50,4 @@ export default async function Image({ params }: { params: { slug: string } }) {
   } catch (err) {
     if (err instanceof Error) throw new Error("Failed to get OG");
   }
-
 }
