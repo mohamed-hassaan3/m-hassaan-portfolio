@@ -9,20 +9,43 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }) {
-  const slug = await params.slug;
-
+  const slug = params.slug;
   const project = projects.find((item) => item.slug === slug);
 
+  if (!project) {
+    return {
+      title: "Project Not Found",
+      description: "No project found for this slug.",
+      openGraph: {
+        title: "Project Not Found",
+        description: "No project found for this slug.",
+        images: ["https://m-hassaan-portfolio.vercel.app/opengraph-image.png"],
+        url: `https://m-hassaan-portfolio.vercel.app/project/${slug}`,
+      },
+    };
+  }
+
+  const ogImageUrl = `https://m-hassaan-portfolio.vercel.app/project/${project.slug}`;
   return {
-    title: project?.name,
-    description: project?.description,
-    images: [project?.src],
+    title: `${project.name} Project`,
+    description: project.description,
+    openGraph: {
+      title: `${project.name} Project`,
+      description: project.description,
+      url: `https://m-hassaan-portfolio.vercel.app/project/${project.slug}`,
+      images: [ogImageUrl],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.name} Project`,
+      description: project.description,
+      images: [ogImageUrl],
+    },
   };
 }
 
-
-const Project = async ({ params }: { params: Promise<{ slug: string }> }) => {
-  const { slug } = await params;
+const Project = async ({ params }: { params: { slug: string } }) => {
+  const { slug } = params;
   const project = projects.find((item) => item.slug === slug);
 
   return (
