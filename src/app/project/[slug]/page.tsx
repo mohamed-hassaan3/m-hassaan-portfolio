@@ -44,8 +44,8 @@ export async function generateMetadata({
   };
 }
 
-const Project = async ({ params }: { params: { slug: string } }) => {
-  const { slug } = params;
+const Project = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const { slug } = await params;
   const project = projects.find((item) => item.slug === slug);
 
   return (

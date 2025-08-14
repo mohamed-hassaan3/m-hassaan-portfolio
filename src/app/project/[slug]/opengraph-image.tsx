@@ -4,10 +4,10 @@ import { projects } from "@/data/data";
 
 export const runtime = "edge";
 
-export default async function Image({ params }: { params: { slug: string } }) {
-  const slug = params.slug;
+export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
+  const {slug} = await params;
   const project = projects.find((item) => item.slug === slug);
-  
+
   if (!project)
     return {
       title: "Project Not Found",

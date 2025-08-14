@@ -44,7 +44,7 @@ const Header = () => {
             <li key={item.name} className={`relative ${pathname === item.path && "dark:text-neutral-200"}`}>
               <Link href={item.path}>{item.name}</Link>
               {pathname === item.path && (
-                <span className="absolute hidden sm:block sm:-left-1 top-1 w-2 h-2 bg-[#b5ff6d] rounded-full"></span>
+                <span className="absolute hidden sm:block sm:-left-1 top-1/2 -translate-y-1/2 w-2 h-2 bg-[#b5ff6d] rounded-full"></span>
               )}
             </li>
           ))}
