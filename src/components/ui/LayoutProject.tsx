@@ -12,7 +12,6 @@ const LayoutProject = ({
   children: React.ReactNode;
   project: Project;
 }) => {
-  
   const projectIndex = projects.findIndex(
     (p: Project) => p.slug === project.slug
   );
@@ -22,9 +21,11 @@ const LayoutProject = ({
 
   return (
     <article className="sm:mt-32 my-16 m-auto sm:w-[80%] md:space-y-16 space-y-4">
-      <nav className="flex items-center gap-4 text-neutral-400 text-[10px] sm:text-xs hover:opacity-70 transition-all duration-300">
-        <ArrowLeft size={20} />
-        <Link href={"/projects"}>Back to Projects</Link>
+      <nav className="text-neutral-400 text-[10px] sm:text-xs hover:opacity-70 transition-all duration-300">
+        <Link href={"/projects"} className="flex gap-2">
+          <ArrowLeft size={20} /> 
+          <span>Back to Projects</span>
+        </Link>
       </nav>
       {children}
       <nav className="my-12">

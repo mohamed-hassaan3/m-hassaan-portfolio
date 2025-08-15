@@ -30,8 +30,8 @@ export const FocusCard = React.memo(
       <Image
         src={card.src}
         alt={card.name}
-        width={0}
-        height={0}
+        width={1200}
+        height={630}
         className="object-cover absolute inset-0 md:aspect-video -translate-x-1/2 left-[50%] -translate-y-1/2 top-[50%] lg:w-[75%] lg:h-[75%] w-full h-full border-6 border-white rounded-4xl"
       />
       <div
