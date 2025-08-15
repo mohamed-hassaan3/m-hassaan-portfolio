@@ -18,11 +18,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://m-hassaan-portfolio.vercel.app"),
   title: {
-    default: "Frontend Egineer | Mohamed Hassaan",
+    default: "Frontend Engineer | Mohamed Hassaan",
     template: "%s | Mohamed Hassaan",
   },
   description:
-    "Mohamed is a Frontend Engineer passionate about clean, accessible design and building fast, scalable apps. Skilled in Docker CI/CD, Prisma, and performance optimization.",
+    "I'm  Mohamed, and I work with brands  globally to build pixel-perfect, engaging, and accessible digital experiences that drive results and achieve business goals.",
   alternates: {
     languages: {
       "en-US": "/en-US",

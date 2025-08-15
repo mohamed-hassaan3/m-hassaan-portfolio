@@ -9,7 +9,7 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  const {slug} = await params;
+  const { slug } = await params;
   const project = projects.find((item) => item.slug === slug);
 
   if (!project) {
@@ -25,21 +25,22 @@ export async function generateMetadata({
     };
   }
 
-  const ogImageUrl = `https://m-hassaan-portfolio.vercel.app/project/${project.slug}`;
+  const baseUrl = `https://m-hassaan-portfolio.vercel.app`;
   return {
+    metadataBase: new URL(`${baseUrl}`),
     title: `${project.name} Project`,
     description: project.description,
     openGraph: {
       title: `${project.name} Project`,
       description: project.description,
-      url: `https://m-hassaan-portfolio.vercel.app/project/${project.slug}`,
-      images: [ogImageUrl],
+      url: `${baseUrl}/project/${project.slug}`,
+      images: [`${baseUrl}/${project.src.src}`],
     },
     twitter: {
       card: "summary_large_image",
       title: `${project.name} Project`,
       description: project.description,
-      images: [ogImageUrl],
+      images: [`${baseUrl}/${project.src.src}`],
     },
   };
 }
