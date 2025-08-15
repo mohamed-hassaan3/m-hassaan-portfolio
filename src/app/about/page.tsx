@@ -1,5 +1,6 @@
-import { Layout, SubFooter } from "@/modules";
 import { Awards, DesignProcess, Eductian, Experience, HeroAbout } from "@/modules/about";
+import { SubFooter } from "@/modules/home";
+import Layout from "@/modules/Layout";
 import { Metadata } from "next";
 import React from "react";
 
