@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import LOGO from "../../public/assets/avatar.svg";
+import LOGO from "../../../public/assets/avatar.svg";
 import { BlurText, CurvedLoop, ShinyText } from "@/components/ui/animation";
 import { AnimationButton, BackgroundBeams } from "@/components/ui";
 

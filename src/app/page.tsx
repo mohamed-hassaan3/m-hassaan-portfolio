@@ -1,4 +1,5 @@
-import { SubProjects, Hero, Layout, SubAbout, SubSpeciality, SubFooter } from "@/modules";
+import { SubProjects, Hero, SubAbout, SubSpeciality, SubFooter } from "@/modules/home";
+import Layout from "@/modules/Layout";
 
 export default function Home() {
   return (

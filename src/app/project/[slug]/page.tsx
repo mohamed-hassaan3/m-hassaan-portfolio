@@ -1,7 +1,8 @@
 import LayoutProject from "@/components/ui/LayoutProject";
 import { projects } from "@/data/data";
-import { Layout, SubFooter } from "@/modules";
-import HeroProject from "@/modules/project/HeroProject";
+import { SubFooter } from "@/modules/home";
+import Layout from "@/modules/Layout";
+import { FeaturesProject, HeroProject, TechProject } from "@/modules/project";
 import React from "react";
 
 export async function generateMetadata({
@@ -54,6 +55,8 @@ const Project = async ({ params }: { params: Promise<{ slug: string }> }) => {
       {project ? (
         <LayoutProject project={project}>
           <HeroProject project={project} />
+          <FeaturesProject project={project} />
+          <TechProject project={project} />
         </LayoutProject>
       ) : (
         <p>Project not found</p>

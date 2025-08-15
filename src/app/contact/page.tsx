@@ -1,6 +1,5 @@
-import { Layout } from '@/modules';
-import ContactForm from '@/modules/contact/ContactForm';
-import ContactQuestion from '@/modules/contact/ContactQuestion';
+import { ContactForm, ContactQuestion } from '@/modules/contact';
+import Layout from '@/modules/Layout';
 import { Metadata } from 'next';
 import React from 'react'
 

@@ -1,10 +1,10 @@
 "use client";
 import { Title } from "@/components/ui";
 import { Sparkle } from "lucide-react";
-import CaontactCard from "./CaontactCard";
 import React, { ChangeEvent, useState } from "react";
 import { SplitText } from "@/components/ui/animation";
 import { SubmitHandler, useForm } from "react-hook-form";
+import CaontactCard from "./ContactCard";
 
 const ContactForm = () => {
   const [userValue, setUserValue] = useState<UserValueProps>({

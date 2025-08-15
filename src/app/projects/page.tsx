@@ -1,4 +1,5 @@
-import { Layout, SubFooter } from "@/modules";
+import { SubFooter } from "@/modules/home";
+import Layout from "@/modules/Layout";
 import Projects from "@/modules/projects/Projects";
 import { Metadata } from "next";
 import React from "react";
