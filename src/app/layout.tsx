@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    siteName: "Mohamed Protfolio",
+    siteName: "Mohamed Hassaan Portfolio",
     type: "website",
     url: "https://m-hassaan-portfolio.vercel.app/",
     images: [
@@ -42,6 +42,7 @@ export const metadata: Metadata = {
   },
   keywords: [
     "Frontend Engineer",
+    "Web Developer",
     "Next.js",
     "React",
     "JavaScript",
@@ -51,7 +52,7 @@ export const metadata: Metadata = {
     "CMS",
   ],
   authors: [
-    { name: "Mohamed H", url: "https://m-hassaan-portfolio.vercel.app/" },
+    { name: "Mohamed Hassaan", url: "https://m-hassaan-portfolio.vercel.app/" },
   ],
   creator: "Mohamed Hassaan",
   publisher: "Mohamed.H",

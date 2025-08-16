@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import PROFILE_IMG from "../../../public/images/profile-img.webp";
 import { skills } from "@/data/data";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import Link from "next/link";
 import {
   InfintyMovingSkills,
@@ -49,18 +49,26 @@ const Hero = () => {
             direction="bottom"
             className="dark:text-neutral-200 md:max-w-2xl mx-auto xl:mx-0 my-2 text-[11px] md:text-sm lg:text-base text-center relative z-10 sm:leading-8 leading-5 tracking-wider font-extralight "
           />
-          <Magnet padding={50} disabled={false} magnetStrength={2} className="px-2 sm:text-lg  m-12 flex justify-center text-center">
+          <Magnet
+            padding={50}
+            disabled={false}
+            magnetStrength={2}
+            className="px-2 sm:text-lg  m-12 flex justify-center text-center"
+          >
             <HoverBorderGradient
               containerClassName="rounded-full"
               as="button"
               className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
             >
               <a
-                href="https://docs.google.com/document/d/1-FAKUAzzpyFfYhI-qBLrKI_o76KxHXEt/edit"
-                target="_blank"
+                href="/Mohamed_Hassaan_Resume_Frontend_Engineer.pdf"
+                download="Mohamed_Hassaan_Resume_Frontend_Engineer"
               >
                 Resume
               </a>
+              <span>
+                <Download />
+              </span>
             </HoverBorderGradient>
           </Magnet>
         </aside>
