@@ -11,7 +11,7 @@ import React from "react";
 
 const ContactQuestion = () => {
   return (
-    <article className="sm:my-32 my-16 m-auto sm:w-[80%] lg:flex sm:gap-12 gap-4">
+    <article className="sm:my-32 my-6 m-auto sm:w-[80%] lg:flex sm:gap-12 gap-4">
       <section className="*:float-left flex flex-col justify-start items-start sm:space-y-4 col-span-2 mb-4 lg:w-[40%]">
         <Title
           text="FAQS"

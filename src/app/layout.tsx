@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Michroma } from "next/font/google";
+import { Geist_Mono, Averia_Libre } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Analytics } from "@vercel/analytics/next";
 import NextTopLoader from "nextjs-toploader";
 
-const michome = Michroma({
+const michome = Averia_Libre({
   weight: "400",
   subsets: ["latin"],
 });
@@ -50,6 +50,7 @@ export const metadata: Metadata = {
     "Restful API",
     "Jest",
     "CMS",
+    "AI"
   ],
   authors: [
     { name: "Mohamed Hassaan", url: "https://m-hassaan-portfolio.vercel.app/" },

@@ -16,7 +16,7 @@ const Awards = () => {
       </section>
       <section className="col-span-4">
         <ul className="*:border-b *:py-4 tracking-widest">
-          <li className="flex jusitfy-between *:text-[12px]">
+          <li className="flex jusitfy-between *:text-[12px] md:*:text-base">
             <p className="w-1/2 leading-6 font-semibold">
               <span className="text-[#b5ff6d]">IBM</span> Solution Designer -
               Rational Software Architect
@@ -29,7 +29,7 @@ const Awards = () => {
               OCT 2024
             </a>
           </li>
-          <li className="flex jusitfy-between *:text-[12px]">
+          <li className="flex jusitfy-between *:text-[12px] md:*:text-base">
             <p className="w-1/2 leading-6 font-semibold">
               <span className="text-[#b5ff6d]">Codecdemy </span>
               Building Interactive JavaScript Websites Course
@@ -42,7 +42,7 @@ const Awards = () => {
               FEB 2021
             </a>
           </li>
-          <li className="flex jusitfy-between *:text-[12px]">
+          <li className="flex jusitfy-between *:text-[12px] md:*:text-base">
             <p className="w-1/2 leading-6 font-semibold">
               <span className="text-[#b5ff6d]">Udacity </span>
               Earn a Certificate from Dubai 1Million Arab Coder Web Developer
@@ -55,7 +55,7 @@ const Awards = () => {
               JUL 2020
             </a>
           </li>
-          <li className="flex jusitfy-between *:text-[12px]">
+          <li className="flex jusitfy-between *:text-[12px] md:*:text-base">
             <p className="w-1/2 leading-6 font-semibold">
               <span className="text-[#b5ff6d]">Test Dome </span>
               Passed the Public Test Ranking in the 25%

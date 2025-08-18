@@ -40,7 +40,7 @@ const Experience = () => {
                 className="w-full"
               >
                 <AccordionTrigger>
-                  <div className="!cursor-pointer font-bold tracking-wider hover:opacity-75 flex items-center sm:items-start  justify-between w-full *:text-[8px] *:sm:text-[13px]">
+                  <div className="!cursor-pointer font-bold tracking-wider hover:opacity-75 flex items-center sm:items-start  justify-between w-full *:text-[11px] *:sm:text-base">
                     <aside className="flex items-center justify-between gap-2">
                       <Image
                         className="object-cover rounded-full shadow"
@@ -51,7 +51,7 @@ const Experience = () => {
                       />
                       <div>
                         <p className="font-semibold">{item.profession}</p>
-                        <small className="font-thin">{item.name}</small>
+                        <small className="font-thin ">{item.name}</small>
                       </div>
                     </aside>
                     <aside className="text-xs font-thin">{item.dates}</aside>
@@ -60,7 +60,7 @@ const Experience = () => {
                 <AccordionContent>
                   <ul className="list-disc space-y-4 ">
                     {item.details.map((detail) => (
-                      <li className="text-xs sm:text-[14px] font-semilight leading-5" key={detail}>{detail}</li>
+                      <li className="text-[11px] sm:text-[14px] font-semilight leading-5" key={detail}>{detail}</li>
                     ))}
                   </ul>
                 </AccordionContent>
