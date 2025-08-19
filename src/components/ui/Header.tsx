@@ -42,7 +42,7 @@ const Header = () => {
         <ul className=" flex items-center md:gap-6 gap-1 *:hover:dark:text-neutral-200 sm:*:px-3 *:px-1 text-[10px] md:text-base font-extrabold tracking-wider">
           {navItems.map((item) => (
             <li key={item.name} className={`relative ${pathname === item.path && "dark:text-neutral-200"}`}>
-              <Link href={item.path}>{item.name}</Link>
+              <Link href={item.path} aria-label={item.name}>{item.name}</Link>
               {pathname === item.path && (
                 <span className="absolute hidden sm:block sm:-left-1 top-1/2 -translate-y-1/2 w-2 h-2 bg-[#b5ff6d] rounded-full"></span>
               )}

@@ -14,7 +14,7 @@ function Hero() {
           text="Frontend Engineer"
           disabled={false}
           speed={3}
-          className="custom-class lg:text-6xl md:text-base  text-3xl text-center font-semibold whitespace-nowrap py-2 lg:tracking-wider"
+          className="custom-class lg:text-6xl md:text-base  text-3xl text-start sm:text-center font-semibold whitespace-nowrap py-2 lg:tracking-wider"
         />
 
         <BlurText
@@ -46,9 +46,9 @@ function Hero() {
             alt="logo"
             width={12}
             height={12}
-            className="hidden sm:inline lg:w-6"
+            className="inline lg:w-6"
           />
-          <span className="lg:text-base text-[8px]">Know me better</span>
+          <span className="lg:text-base ">Know me better</span>
         </AnimationButton>
       </div>
     </div>

@@ -94,7 +94,7 @@ const ContactForm = () => {
             className="flex flex-col w-full mb-6 md:mb-0 *:text-base"
             onSubmit={handleSubmit(onSubmit)}
           >
-            <div className="my-2">
+            <div className="sm:my-2 my-1">
               <label>Full Name</label>
               <input
                 {...register("name", { required: true })}
@@ -110,7 +110,7 @@ const ContactForm = () => {
                 <small className="text-xs text-red-500">Name is required</small>
               )}
             </div>
-            <div className="my-2">
+            <div className="sm:my-2 my-1">
               <label>Email</label>
               <input
                 {...register("email", { required: true })}
@@ -128,7 +128,7 @@ const ContactForm = () => {
                 </small>
               )}
             </div>
-            <div className="my-2">
+            <div className="sm:my-2 my-1">
               <label>Message</label>
               <textarea
                 {...register("message", { required: true })}
