@@ -1,4 +1,4 @@
-import { DataAPIClient } from "@datastax/astra-db-ts";
+/* import { DataAPIClient } from "@datastax/astra-db-ts";
 import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
 import { PuppeteerWebBaseLoader } from "@langchain/community/document_loaders/web/puppeteer";
 import { OpenAI } from "openai";
@@ -88,3 +88,4 @@ const scrapePage = async (url: string) => {
 };
 
 createCollection().then(() => loadOwnData());
+ */
