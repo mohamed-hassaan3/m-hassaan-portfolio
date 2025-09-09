@@ -6,8 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "seed": "ts-node ./src/app/api/chatbot/route.ts"
+    "lint": "next lint"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.11",
@@ -25,7 +24,6 @@
     "nextjs-toploader": "^3.8.16",
     "node-fetch": "^3.3.2",
     "nodemailer": "^7.0.5",
-    "ollama": "^0.5.17",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.62.0",

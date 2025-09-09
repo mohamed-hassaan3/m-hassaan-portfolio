@@ -44,14 +44,3 @@ Showcases projects, skills, and experiences with optimized performance and acces
 ├── styles/                 # Global styles & Tailwind config
 ├── next.config.ts          # Next.js configuration
 └── package.json
-
----
-title: Portfolio Chatbot
-emoji: 🤖
-colorFrom: blue
-colorTo: green
-sdk: docker
-app_port: 3000
-pinned: false
----
-Chatbot for my portfolio using Llama 3.1

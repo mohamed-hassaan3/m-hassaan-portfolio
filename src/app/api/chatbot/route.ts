@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-// import ollama from "ollama";
 import { skills, experiences, projects, speciality } from "@/data/data";
 
 const portfolioData = {
@@ -41,88 +40,42 @@ Here is the portfolio data:
 export async function POST(req: Request) {
   try {
     const { message } = await req.json();
-    if (typeof message !== "string" || message.length > 500) {
-      return NextResponse.json({ error: "Invalid message" }, { status: 400 });
-    }
-
     const response = await fetch(
-      "https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3.1-8B-Instruct",
+      "https://openrouter.ai/api/v1/chat/completions",
       {
         method: "POST",
         headers: {
-          "Authorization": `Bearer ${process.env.HF_API_KEY}`,
+          Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
           "Content-Type": "application/json",
+          "HTTP-Referer": "https://m-hassaan-portfolio.vercel.app",
+          "X-Title": "Mohamed's Portfolio",
         },
         body: JSON.stringify({
+          model: "meta-llama/llama-3.3-8b-instruct:free",
           messages: [
-            { role: "system", content: formattedData }, 
-            { role: "user", content: message },
+            {
+              role: "user",
+              content: message,
+            },
+            {
+              role: "assistant",
+              content: formattedData,
+            },
           ],
-          max_tokens: 150,
-          temperature: 0.7,
+          // max_tokens: 512,
+          // temperature: 0.7,
         }),
       }
     );
-
     if (!response.ok) {
-      throw new Error(`HF API error: ${response.statusText}`);
+      throw new Error(`ERROR HF: ${response.statusText}`);
     }
-
-    const data = await response.json();
-    const reply = data[0]?.generated_text || "No response generated";
-
-    return NextResponse.json({ reply });
+    const result = await response.json();
+    return NextResponse.json({ replay: result.choices[0].message });
   } catch (e: unknown) {
-    return NextResponse.json({ error: String(e) }, { status: 500 });
+    return NextResponse.json(
+      { error: `ERROR Server: ${String(e)}` },
+      { status: 500 }
+    );
   }
 }
-
-/* export async function POST(req: Request) {
-  try {
-    const { message } = await req.json();
-
-    const response = await fetch(`${process.env.CHATBOT_SERVER_URL}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.FRIENDLI_TOKEN}`,
-      },
-      body: JSON.stringify({
-        inputs: [
-          { role: "system", content: formattedData },
-          { role: "user", content: message },
-        ],
-         parameters: {
-          max_new_tokens: 200,
-          temperature: 0.7,
-        },
-      }),
-    });
-
-    const data = await response.json();
-    console.log("🚨 RAW FriendliAI RESPONSE:", JSON.stringify(data, null, 2));
-
-    return NextResponse.json(data);
-  } catch (e: unknown) {
-    return NextResponse.json({ error: String(e) }, { status: 500 });
-  }
-} */
-
-/*  export async function POST(req: Request) {
-  try {
-    const { message } = await req.json();
-
-    const response = await ollama.chat({
-      model: "mistral",
-      messages: [
-        { role: "system", content: formattedData },
-        { role: "user", content: message },
-      ],
-    });
-
-    return NextResponse.json({ reply: response.message.content });
-  } catch (e: unknown) {
-    return NextResponse.json({ error: String(e) }, { status: 500 });
-  }
-}
-  */
