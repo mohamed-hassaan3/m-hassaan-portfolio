@@ -54,6 +54,11 @@
     }
   }
 }
+@layer utilities {
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+}
 
 /* ANIMATION */
 @theme {

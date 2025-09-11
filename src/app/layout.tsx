@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Analytics } from "@vercel/analytics/next";
 import NextTopLoader from "nextjs-toploader";
+import Chatbot from "@/components/Chatbot";
 
 const michome = Averia_Libre({
   weight: "400",
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     "Restful API",
     "Jest",
     "CMS",
-    "AI"
+    "AI",
   ],
   authors: [
     { name: "Mohamed Hassaan", url: "https://m-hassaan-portfolio.vercel.app/" },
@@ -74,9 +75,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <meta
-        name="viewport"
-      />
+      <meta name="viewport" />
       <body
         className={`${michome.className} ${geistMono.variable} antialiased`}
       >
@@ -88,6 +87,7 @@ export default function RootLayout({
         >
           <NextTopLoader color="#b5ff6d" showSpinner={false} />
           {children}
+          <Chatbot />
           <div className="fixed bottom-0 left-0 right-0 h-[100px] dark:bg-gradient-to-t dark:from-neutral-950 to-transparent"></div>
           <Analytics />
         </ThemeProvider>

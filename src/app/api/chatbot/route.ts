@@ -54,12 +54,12 @@ export async function POST(req: Request) {
           model: "meta-llama/llama-3.3-8b-instruct:free",
           messages: [
             {
-              role: "user",
-              content: message,
+              role: "system",
+              content: formattedData,
             },
             {
-              role: "assistant",
-              content: formattedData,
+              role: "user",
+              content: message,
             },
           ],
           // max_tokens: 512,
