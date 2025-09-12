@@ -10,11 +10,11 @@ const Chatbot = () => {
   const [isSending, setIsSending] = useState<boolean>(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
   const endRef = useRef<HTMLDivElement | null>(null);
-  
+
   useEffect(() => {
     endRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isSending]);
-  
+
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setInput("");
@@ -84,11 +84,20 @@ const Chatbot = () => {
 
       {isChatOpen && (
         <main className="relative">
-          <section className="overflow-y-scroll no-scrollbar h-[50vh] w-[90%] md:w-[50%] xl:w-[30%] fixed bottom-44 right-6 bg-neutral-200 dark:bg-neutral-800 z-40 rounded-t-2xl text-base">
+          <section className="overflow-y-scroll no-scrollbar lg:h-[50vh] h-[30vh] w-[90%] md:w-[50%] xl:w-[30%] fixed bottom-44 right-6 bg-neutral-200 dark:bg-neutral-800 z-40 rounded-t-2xl text-base">
             {haveChat ? (
-              <ChatConversion messages={messages} isSending={isSending} endRef={endRef} />
+              <ChatConversion
+                messages={messages}
+                isSending={isSending}
+                endRef={endRef}
+              />
             ) : (
-              <article className="p-4 text-neutral-300 text-md">👋Hi there! I&apos;m here to answer questions related to Mohamed&apos;s Professional career and portfolio. Feel free to ask about his work experience, projects, skills, or any details his resume</article>
+              <article className="p-4 text-md">
+                👋Hi there! I&apos;m here to answer questions related to
+                Mohamed&apos;s Professional career and portfolio. Feel free to
+                ask about his work experience, projects, skills, or any details
+                his resume
+              </article>
             )}
           </section>
           <section className="fixed bottom-20 z-40 bg-neutral-400 dark:bg-neutral-700 border-t shadow-md rounded-b-2xl right-6 w-[90%] md:w-[50%] xl:w-[30%]">

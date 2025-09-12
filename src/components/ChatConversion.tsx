@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import AVATAR from "../../public/images/profile-img.webp";
-import { LoaderFive } from "@/components/ui/loader";
+import { LoaderBounce } from "@/components/ui/loader";
  
 const ChatConversion = (props: ChatConversionProps) => {
   const { messages, isSending, endRef } = props;
@@ -37,7 +37,7 @@ const ChatConversion = (props: ChatConversionProps) => {
             alt="assistant"
             className="rounded-full w-[50px] h-[50px] object-cover mb-1"
           />
-          <LoaderFive text="Hassaan Typing..." />
+          <LoaderBounce />
         </aside>
       )}
       <div ref={endRef} />
