@@ -12,7 +12,7 @@ const ChatConversion = (props: ChatConversionProps) => {
           key={index}
           className={`${
             message.role === "user"
-              ? " bg-neutral-700 w-fit ml-auto"
+              ? " dark:bg-neutral-700 bg-neutral-300 w-fit ml-auto"
               : "mr-auto"
           } py-2 px-4 rounded-[12px] `}
         >
